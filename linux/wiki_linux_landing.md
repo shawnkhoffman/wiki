@@ -16,4 +16,6 @@ Welcome to the Linux/UNIX wiki.
 
 Here are the distributions I work with:
 
+- Ubuntu
+
 {% include links.html %}
