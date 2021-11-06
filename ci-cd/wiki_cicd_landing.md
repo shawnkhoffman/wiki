@@ -10,7 +10,7 @@ permalink: /wiki-cicd.html
 
 ## Sample Content
 
-Lorem Ipsum
+Lorem Ipsum.
 
 
 ## More sample content
