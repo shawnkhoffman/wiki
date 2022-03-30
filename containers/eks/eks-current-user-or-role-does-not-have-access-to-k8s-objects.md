@@ -1,7 +1,7 @@
 ---
 title: Current user or role does not have access to Kubernetes objects
 summary: "<br>
-When you install EKS for the first time, you might receive the following error from the AWS Console: </br>
+When you deploy or access EKS for the first time, you might receive the following error from the AWS Console: </br>
 </br>
 Your current user or role does not have access to Kubernetes objects on this EKS cluster. This may be due to the current user or role not having Kubernetes RBAC permissions to describe cluster resources or not having an entry in the cluster’s auth config map."
 tags: [eks, kubernetes]
