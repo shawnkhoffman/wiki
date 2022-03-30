@@ -106,7 +106,7 @@ Using a YAML file you have generated, you can deploy the Kubernetes objects by u
     </div>
 
 <div role="tabpanel" class="tab-pane" id="deploy-with-yaml-example2">
-    <p><i># Create resources from YAML if they don't exist yet, and modify them if they already exist and was previously created with this command</i></p>
+    <p><i># Create resources from YAML if they don't exist yet, and modify them if they already exist and were previously created with this command</i></p>
     <p><b>kubectl apply -f test-nginx.yaml</b></p>
     </div>
 
