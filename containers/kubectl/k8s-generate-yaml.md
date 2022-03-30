@@ -1,7 +1,7 @@
 ---
 title: Generating YAML from kubectl
 summary: "How to generate YAML for objects on Kubernetes"
-tags: [kubectl, kubernetes, containers]
+tags: [kubectl, kubernetes]
 keywords: kubectl, kubernetes
 sidebar: k8s_sidebar
 permalink: /k8s-generate-yaml.html
