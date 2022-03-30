@@ -72,7 +72,7 @@ spec:
 status: {}
 ```
 
-## Send output to YAML
+## Send YAML output to a file
 
 You can send the output of YAML you have generated to a file, which you can then use to deploy your object(s).
 
