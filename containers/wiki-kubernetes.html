@@ -1,0 +1,187 @@
+---
+title: Kubernetes Wiki
+summary: "This is just a sample topic..."
+tags: [kubernetes, containers]
+keywords: kubernetes, containers
+sidebar: k8s_sidebar
+permalink: /wiki-kubernetes.html
+# simple_map: true
+# map_name: usermap
+# box_number: 1
+# folder: product2
+---
+
+{% if site.output == "pdf" %}
+{{site.data.alerts.note}} The content on this page doesn't display well on PDF, but I included it anyway so you could see the problems this layout poses if you're including it in PDF.  {{site.data.alerts.end}}
+{% endif %}
+
+{% unless site.output == "pdf" %}
+<script src="js/jquery.shuffle.min.js"></script>
+<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+{% endunless %}
+
+      <div class="filter-options">
+      <button class="btn btn-primary" data-group="all">All</button>
+      <button class="btn btn-primary" data-group="kubectl">kubectl</button>
+      <button class="btn btn-primary" data-group="k8s-pods">Pods</button>
+      <button class="btn btn-primary" data-group="k8s-scheduler">Scheduler</button>
+      <button class="btn btn-primary" data-group="k8s-ingress-controller">Ingress Controller</button>
+      <button class="btn btn-primary" data-group="k8s-api">Kubernetes API</button>
+      <button class="btn btn-primary" data-group="aks">AKS</button>
+      <button class="btn btn-primary" data-group="eks">EKS</button>
+    </div>      
+
+<div id="grid" class="row">
+
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["kubectl"]'>
+
+               <div class="panel panel-default">
+               <div class="panel-heading">kubectl</div>
+               <div class="panel-body">
+                  If you're getting started with Jekyll, see the links in this section. It will take you from the beginning level to comfortable. 
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "kubectl" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+    
+    </div>
+   
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["k8s-pods"]'>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Pods</div>
+            <div class="panel-body">
+                This section lists different content types and how to work with them.
+                <ul>
+                    {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                    {% if tag == "k8s-pods" %}
+                    <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["k8s-scheduler"]'>
+
+                <div class="panel panel-default">
+               <div class="panel-heading">Scheduler</div>
+               <div class="panel-body">
+                  These topics get into formatting syntax, such as images and tables, that you'll use on each of your pages: 
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "k8s-scheduler" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["k8s-ingress-controller"]'>
+         
+      <div class="panel panel-default">
+               <div class="panel-heading">Ingress Controller</div>
+               <div class="panel-body">These topics cover strategies for single_sourcing. Single sourcing refers to strategies for re-using the same source in different outputs for different audiences or purposes.
+               <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "k8s-ingress-controller" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+               </ul>
+            </div>
+         </div>
+
+    </div>
+
+       <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["k8s-api"]'>
+
+           <div class="panel panel-default">
+               <div class="panel-heading">Kubernetes API</div>
+               <div class="panel-body">When you're building, publishing, and deploying your Jekyll site, you might find these topics helpful.
+                   <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "k8s-api" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                   </ul>
+               </div>
+            </div>
+
+    </div>
+
+        <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["aks"]'>
+
+             <div class="panel panel-default">
+               <div class="panel-heading">AKS</div>
+               <div class="panel-body">
+                  These pages highlight special layouts outside of the conventional page and TOC hierarchy.
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "aks" %}
+                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+
+    </div>
+
+          <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["eks"]'>
+
+            <div class="panel panel-default">
+              <div class="panel-heading">EKS</div>
+              <div class="panel-body">
+                These pages highlight special layouts outside of the conventional page and TOC hierarchy.
+                <ul>
+              {% for page in site.pages %}
+              {% for tag in page.tags %}
+              {% if tag == "eks" %}
+                    <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+              {% endif %}
+              {% endfor %}
+              {% endfor %} 
+                </ul>
+              </div>
+          </div>
+
+      </div>
+          <!-- sizer -->
+      <div class="col-xs-6 col-sm-4 col-md-1 shuffle_sizer"></div>          
+
+
+    </div><!-- /#grid -->
+
+{% unless site.output == "pdf" %}
+{% include initialize_shuffle.html %}
+{% endunless %}
+
+{{site.data.alerts.note}} There is more coming to each subject in this wiki category as more content is added.{{site.data.alerts.end}}
