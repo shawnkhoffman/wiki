@@ -4,7 +4,7 @@ summary: "How to generate YAML for objects on Kubernetes"
 tags: [kubectl, kubernetes]
 keywords: kubectl, kubernetes
 sidebar: k8s_sidebar
-permalink: /k8s-generate-yaml.html
+permalink: /kubectl-generate-yaml
 # simple_map: true
 # map_name: usermap
 # box_number: 1

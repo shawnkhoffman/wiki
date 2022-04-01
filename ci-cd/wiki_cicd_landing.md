@@ -4,7 +4,7 @@ summary: ""
 tags: [cicd]
 keywords: cicd
 sidebar: cicd_sidebar
-permalink: /wiki-cicd.html
+permalink: /wiki-cicd
 ---
 
 

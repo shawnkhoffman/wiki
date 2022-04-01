@@ -7,7 +7,7 @@ Your current user or role does not have access to Kubernetes objects on this EKS
 tags: [eks, kubernetes]
 keywords: eks, kubernetes
 sidebar: eks_sidebar
-permalink: /eks-current-user-or-role-does-not-have-access-to-k8s-objects.html
+permalink: /eks-current-user-or-role-does-not-have-access-to-k8s-objects
 # simple_map: true
 # map_name: usermap
 # box_number: 1
