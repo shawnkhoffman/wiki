@@ -1,11 +1,11 @@
 ---
 title: Kubernetes Wiki
 summary: "All things k8s"
-tags: [kubernetes, containers]
-keywords: kubernetes, containers
+tags: [Kubernetes, Containers]
+keywords: Kubernetes, Containers
 sidebar: k8s_sidebar
 permalink: /wiki-kubernetes
-folder: containers
+folder: kubernetes
 # simple_map: true
 # map_name: usermap
 # box_number: 1
@@ -23,12 +23,12 @@ folder: containers
       <div class="filter-options">
       <button class="btn btn-primary" data-group="all">All</button>
       <button class="btn btn-primary" data-group="kubectl">kubectl</button>
-      <button class="btn btn-primary" data-group="k8s-pods">Pods</button>
-      <button class="btn btn-primary" data-group="k8s-scheduler">Scheduler</button>
-      <button class="btn btn-primary" data-group="k8s-ingress-controller">Ingress Controller</button>
-      <button class="btn btn-primary" data-group="k8s-api">Kubernetes API</button>
-      <button class="btn btn-primary" data-group="aks">AKS</button>
-      <button class="btn btn-primary" data-group="eks">EKS</button>
+      <button class="btn btn-primary" data-group="Pods">Pods</button>
+      <button class="btn btn-primary" data-group="Scheduler">Scheduler</button>
+      <button class="btn btn-primary" data-group="Ingress Controller">Ingress Controller</button>
+      <button class="btn btn-primary" data-group="Kubernetes API">Kubernetes API</button>
+      <button class="btn btn-primary" data-group="AKS">AKS</button>
+      <button class="btn btn-primary" data-group="EKS">EKS</button>
     </div>      
 
 <div id="grid" class="row">
@@ -55,7 +55,7 @@ folder: containers
     </div>
    
 
-    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["k8s-pods"]'>
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Pods"]'>
 
         <div class="panel panel-default">
             <div class="panel-heading">Pods</div>
@@ -64,7 +64,7 @@ folder: containers
                 <ul>
                     {% for page in site.pages %}
                     {% for tag in page.tags %}
-                    {% if tag == "k8s-pods" %}
+                    {% if tag == "Pods" %}
                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                     {% endif %}
                     {% endfor %}
@@ -77,7 +77,7 @@ folder: containers
 
 
 
-    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["k8s-scheduler"]'>
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Scheduler"]'>
 
                 <div class="panel panel-default">
                <div class="panel-heading">Scheduler</div>
@@ -86,7 +86,7 @@ folder: containers
                   <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
-                {% if tag == "k8s-scheduler" %}
+                {% if tag == "Scheduler" %}
                   <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
@@ -97,7 +97,7 @@ folder: containers
 
     </div>
 
-    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["k8s-ingress-controller"]'>
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Ingress Controller"]'>
          
       <div class="panel panel-default">
                <div class="panel-heading">Ingress Controller</div>
@@ -105,7 +105,7 @@ folder: containers
                <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
-                {% if tag == "k8s-ingress-controller" %}
+                {% if tag == "Ingress Controller" %}
                   <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
@@ -116,7 +116,7 @@ folder: containers
 
     </div>
 
-       <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["k8s-api"]'>
+       <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Kubernetes API"]'>
 
            <div class="panel panel-default">
                <div class="panel-heading">Kubernetes API</div>
@@ -124,7 +124,7 @@ folder: containers
                    <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
-                {% if tag == "k8s-api" %}
+                {% if tag == "Kubernetes API" %}
                   <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
@@ -135,7 +135,7 @@ folder: containers
 
     </div>
 
-        <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["aks"]'>
+        <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["AKS"]'>
 
              <div class="panel panel-default">
                <div class="panel-heading">AKS</div>
@@ -144,7 +144,7 @@ folder: containers
                   <ul>
                 {% for page in site.pages %}
                 {% for tag in page.tags %}
-                {% if tag == "aks" %}
+                {% if tag == "AKS" %}
                      <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                 {% endif %}
                 {% endfor %}
@@ -155,7 +155,7 @@ folder: containers
 
     </div>
 
-          <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["eks"]'>
+          <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["EKS"]'>
 
             <div class="panel panel-default">
               <div class="panel-heading">EKS</div>
@@ -164,7 +164,7 @@ folder: containers
                 <ul>
               {% for page in site.pages %}
               {% for tag in page.tags %}
-              {% if tag == "eks" %}
+              {% if tag == "EKS" %}
                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
               {% endif %}
               {% endfor %}

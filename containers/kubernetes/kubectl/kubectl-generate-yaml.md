@@ -1,8 +1,8 @@
 ---
 title: Generating YAML from kubectl
 summary: "How to generate YAML for objects on Kubernetes"
-tags: [kubectl, kubernetes]
-keywords: kubectl, kubernetes
+tags: [Kubernetes, kubectl]
+keywords: Kubernetes, kubectl
 sidebar: k8s_sidebar
 permalink: /kubectl-generate-yaml
 # simple_map: true
@@ -33,7 +33,7 @@ The `-o` (output) flag allows you to tell kubectl which formatting you want the 
 </ul>
   <div class="tab-content">
 <div role="tabpanel" class="tab-pane active" id="yaml-for-pods-baseCommand">
-    <p><b>kubectl run <i>&lt;name-of-pod&gt;</i> --image=<i>&lt;container-image&gt;</i> --dry-run=client -o yaml</b></p>
+    <p><b>kubectl run [POD NAME] --image=[CONTAINER IMAGE] --dry-run=client -o yaml</b></p>
 </div>
 
 <div role="tabpanel" class="tab-pane" id="yaml-for-pods-example1">

@@ -17,4 +17,4 @@ Lorem Ipsum.
 
 Contrary to popular belief, Lorem Ipsum.
 
-{% include links.html %}
+<!-- {% include links.html %} -->
