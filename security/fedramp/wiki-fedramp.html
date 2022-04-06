@@ -1,0 +1,168 @@
+---
+title: FedRAMP Wiki
+summary: "All things FedRAMP"
+tags: [Security, FedRAMP, FISMA]
+keywords: Security, FedRAMP, FISMA
+sidebar: security_sidebar
+permalink: /wiki-fedramp
+folder: fedramp
+# simple_map: true
+# map_name: usermap
+# box_number: 1
+---
+
+{% if site.output == "pdf" %}
+{{site.data.alerts.note}} The content on this page doesn't display well on PDF.  {{site.data.alerts.end}}
+{% endif %}
+
+{% unless site.output == "pdf" %}
+<script src="js/jquery.shuffle.min.js"></script>
+<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+{% endunless %}
+
+      <div class="filter-options">
+      <!-- <button class="btn btn-primary" data-group="all">All</button>
+      <button class="btn btn-primary" data-group="kubectl">kubectl</button>
+      <button class="btn btn-primary" data-group="Pods">Pods</button>
+      <button class="btn btn-primary" data-group="Scheduler">Scheduler</button>
+      <button class="btn btn-primary" data-group="Ingress Controller">Ingress Controller</button>
+      <button class="btn btn-primary" data-group="Kubernetes API">Kubernetes API</button>
+      <button class="btn btn-primary" data-group="AKS">AKS</button> -->
+      <button class="btn btn-primary" data-group="Glossary">Glossary</button>
+    </div>      
+
+<div id="grid" class="row">
+    <!-- <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["kubectl"]'>
+               <div class="panel panel-default">
+               <div class="panel-heading">kubectl</div>
+               <div class="panel-body">
+                 The default command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "kubectl" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+    </div> -->
+    <!-- <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Pods"]'>
+        <div class="panel panel-default">
+            <div class="panel-heading">Pods</div>
+            <div class="panel-body">
+              The smallest deployable units of computing that you can create and manage in Kubernetes.
+                <ul>
+                    {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                    {% if tag == "Pods" %}
+                    <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div> -->
+    <!-- <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Scheduler"]'>
+                <div class="panel panel-default">
+               <div class="panel-heading">Scheduler</div>
+               <div class="panel-body">
+                A control plane process that assigns Pods to Nodes.
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "Scheduler" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                  </ul>
+               </div>
+            </div>
+    </div> -->
+    <!-- <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Ingress Controller"]'>
+      <div class="panel panel-default">
+               <div class="panel-heading">Ingress Controller</div>
+               <div class="panel-body">Responsible for fulfilling the Ingress, usually with a load balancer, though it may also configure your edge router or additional frontends to help handle the traffic.
+               <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "Ingress Controller" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %} 
+               </ul>
+            </div>
+         </div>
+    </div> -->
+       <!-- <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Kubernetes API"]'>
+           <div class="panel panel-default">
+               <div class="panel-heading">Kubernetes API</div>
+               <div class="panel-body">Lets you query and manipulate the state of API objects in Kubernetes (for example: Pods, Namespaces, ConfigMaps, and Events).
+                   <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "Kubernetes API" %}
+                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                {% endif %}
+                {% endfor %}
+                {% endfor %}
+                   </ul>
+               </div>
+            </div>
+    </div> -->
+        <!-- <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["AKS"]'>
+             <div class="panel panel-default">
+               <div class="panel-heading">Legal Policies</div>
+               <div class="panel-body">
+                Azure Kubernetes Service (AKS): Azure's managed Kubernetes service with hardened security and fast delivery.
+                  <ul>
+                {% for page in site.pages %}
+                {% for tag in page.tags %}
+                {% if tag == "FedRAMP" %}
+                    {% for tag in page.tags %}
+                        {% if tag == "Legal Policies" %}
+                            <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+              {% endif %}
+                {% endfor %}
+                {% endfor %} 
+                  </ul>
+               </div>
+            </div>
+    </div> -->
+          <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Glossary"]'>
+            <div class="panel panel-default">
+              <div class="panel-heading">Glossary</div>
+              <div class="panel-body">
+                Terms related to FedRAMP and the Federal Information Security Management Act (FISMA).
+                <ul>
+              {% for page in site.pages %}
+              {% for tag in page.tags %}
+              {% if tag == "FedRAMP" %}
+                    {% for tag in page.tags %}
+                        {% if tag == "Glossary" %}
+                            <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+              {% endif %}
+              {% endfor %}
+              {% endfor %} 
+                </ul>
+              </div>
+          </div>
+      </div>
+          <!-- sizer -->
+      <div class="col-xs-6 col-sm-4 col-md-1 shuffle_sizer"></div>          
+    </div><!-- /#grid -->
+
+{% unless site.output == "pdf" %}
+{% include initialize_shuffle.html %}
+{% endunless %}
+
+{{site.data.alerts.note}} There is more coming to each subject in this wiki category as more content is added.{{site.data.alerts.end}}
