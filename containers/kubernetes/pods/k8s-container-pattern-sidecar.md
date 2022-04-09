@@ -1,5 +1,5 @@
 ---
-title: Sidecar Container Pattern
+title: Kubernetes – Sidecar Container Pattern
 keywords: Kubernetes, Pods
 summary: "When you would use the Sidecar Container Pattern on a Pod, with examples"
 sidebar: k8s_sidebar

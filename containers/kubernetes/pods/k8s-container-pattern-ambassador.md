@@ -1,5 +1,5 @@
 ---
-title: Ambassador Container Pattern
+title: Kubernetes – Ambassador Container Pattern
 keywords: Kubernetes, Pods
 summary: "When you would use the Ambassador Container Pattern on a Pod, with examples"
 sidebar: k8s_sidebar

@@ -1,5 +1,5 @@
 ---
-title: Adapter Container Pattern
+title: Kubernetes – Adapter Container Pattern
 keywords: Kubernetes, Pods
 summary: "When you would use the Adapter Container Pattern on a Pod, with examples"
 sidebar: k8s_sidebar
