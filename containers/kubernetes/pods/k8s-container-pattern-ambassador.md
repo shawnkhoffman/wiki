@@ -39,7 +39,7 @@ spec:
     - containerPort: 6380
 ```
 
-The above Pod definition defines two containers: the application Pod running the Redis image as a client to other Redis servers, and the Ambassador container running the `malexer/twemproxy` image, which is an open source proxy server that provides a way to evenly distribute cached data between multiple Redis instances to improve the performance, reliability, and resilience of a distributed system, and it is one of Google's recommended solutions for managing a cluster of Memorystore instances on GCP. You can also see that the Ambassador container is listening to `localhost` because it shares the same Pod as the application container, it listens to port 6380 as a default configuration for this image, and it also has the Redis instances passed in as environment variables – in the form of `address:port:weight` as required.
+The above Pod definition defines two containers: the application Pod running the Redis image as a client to other Redis servers, and the Ambassador container running the `malexer/twemproxy` image, which is an open source proxy server that provides a way to evenly distribute cached data between multiple Redis instances to improve the performance, reliability, and resilience of a distributed system, and it is one of Google's recommended solutions for managing a cluster of Memorystore instances on GCP. You can also see that the Ambassador container is listening to `localhost` because it shares the same Pod as the application container, it listens to port 6380 as a default configuration for this image, and it also has the Redis instances passed in as environment variables – in the form of `address:port:weight`, as required.
 
 At this point, we only need the two Redis instances that the Ambassador container is configured to communicate with. The following StatefulSet definition creates them:
 
@@ -108,6 +108,5 @@ Authored by: Shawn Hoffman
 
 **References:**
 
-- [nginx/nginx-prometheus-exporter](https://hub.docker.com/r/nginx/nginx-prometheus-exporter)
 - [Wikipedia. Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming)
 - [Google. Running Redis on GCP](https://cloud.google.com/blog/products/databases/running-redis-on-gcp-four-deployment-scenarios)

@@ -65,4 +65,4 @@ Authored by: Shawn Hoffman
 
 **References:**
 
-- [nginx/nginx-prometheus-exporter](https://hub.docker.com/r/nginx/nginx-prometheus-exporter)
+- [NGINX. Configuring logging](https://docs.nginx.com/nginx/admin-guide/monitoring/logging/)
