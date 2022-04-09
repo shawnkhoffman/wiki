@@ -8,7 +8,7 @@ folder: pods
 tags: [Kubernetes, Pods]
 ---
 
-The **Ambassador container** is also a form of *sidecar container* that serves as a *proxy* to the primary container on a pod. It is used as a proxy between the application container and one or more outside services; this is ideal when you don't want the primary container on the pod to be exposed and you instead want routing to go through the ambassador, allowing it to be a *representative* of your primary container. It also forms an abstraction layer so that the application developer can focus on the application itself without worrying about the infrastructure connectivity details.
+An **Ambassador container** is a form of *sidecar container* that serves as a *proxy* to the primary container on a pod. It is used as a proxy between the application container and one or more outside services; this is ideal when you don't want the primary container on the pod to be exposed and you instead want routing to go through the ambassador, allowing it to be a *representative* of your primary container. It also forms an abstraction layer so that the application developer can focus on the application itself without worrying about the infrastructure connectivity details.
 
 An example use case for this is when there are other tasks that require the application's function in order to work correctly and you direct those tasks over to a sidecar container.
 

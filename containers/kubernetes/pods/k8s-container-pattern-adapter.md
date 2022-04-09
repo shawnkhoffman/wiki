@@ -8,7 +8,7 @@ folder: pods
 tags: [Kubernetes, Pods]
 ---
 
-This container is one that *adapts* the output of the primary container on a pod. An example use case for this is when you need to standardize and normalize the data output from the primary container into a specification that fits the standards across your applications without any change to application code or logic.
+An **Adapter container** is one that *adapts* the output of the primary container on a pod. An example use case for this is when you need to standardize and normalize the data output from the primary container into a specification that fits the standards across your applications without any change to application code or logic.
 
 ## nginx webserver with Prometheus monitoring
 
