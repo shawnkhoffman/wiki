@@ -8,7 +8,7 @@ folder: pods
 tags: [Kubernetes, Pods]
 ---
 
-A **sidecar container** is one that *enhances* or *extends* the primary container on a pod, and this typically requires shared access to the same resources (e.g., *volumes* and the *network interface*) to exchange information. One such enhancement is logging or monitoring on your application. An example of this use case is Istio Service Mesh, which is a product used for monitoring and shaping traffic on Kubernetes. Istio adds a sidecar container to each pod in order to fetch the traffic telemetry that it needs. In this case, these containers belong together on the same pod.
+A **Sidecar container** is one that *enhances* or *extends* the primary container on a pod, and this typically requires shared access to the same resources (e.g., *volumes* and the *network interface*) to exchange information. One such enhancement is logging or monitoring on your application. An example of this use case is Istio Service Mesh, which is a product used for monitoring and shaping traffic on Kubernetes. Istio adds a sidecar container to each pod in order to fetch the traffic telemetry that it needs. In this case, these containers belong together on the same pod.
 
 Here's another real world example of the Sidecar Pattern.
 
