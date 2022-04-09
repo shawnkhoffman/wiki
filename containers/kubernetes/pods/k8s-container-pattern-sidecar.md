@@ -54,7 +54,7 @@ Moreover, if you created multiple pods from this type of configuration on the sa
 If you want to run commands on your Sidecar container or just see how things are operating, you could simply run the following command:
 
 ```bash
-$ kubectl exec webserver -c sidecar -it -- /bin/bash
+$ kubectl exec sidecar -c sidecar-container -it -- /bin/bash
 ```
 
 ---
