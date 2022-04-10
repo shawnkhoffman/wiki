@@ -8,7 +8,7 @@ folder: pods
 tags: [Kubernetes, Pods]
 ---
 
-An **Init container** is an additional container in a pod that completes a task before the primary container is started. The purpose of this pattern is to decouple the primary application container from any initialization logic that it needs, similarly to how you would when you instantiate a new object with a constructor in any Object Oriented Programming language. Furthermore, the primary container would only be started once the init container completed its task.
+An **Init container** is an additional container in a pod that completes a task before the primary container is started. The purpose of this pattern is to decouple the primary application container from any initialization logic that it needs, similarly to how you would when you instantiate a new object with a constructor in any Object Oriented Programming language.
 
 What makes this type of container different from any sidecar container is that it runs *before* the primary container starts, whereas a sidecar container continuously runs *alongside* the primary container.
 
