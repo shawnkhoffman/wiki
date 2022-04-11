@@ -53,9 +53,18 @@ You can see two containers configured to this pod. The adapter container uses th
 
 If you want to run commands on your Adapter container or just see how things are operating, you could simply run the following command:
 
-```bash
-$ kubectl exec adapter -c adapter-container -it -- /bin/bash
-```
+<ul id="profileTabs" class="nav nav-tabs">
+    <li class="active"><a href="#baseCommand" data-toggle="tab">Base command</a></li>
+    <li><a href="#example" data-toggle="tab">Example</a></li>
+</ul>
+  <div class="tab-content">
+<div role="tabpanel" class="tab-pane active" id="baseCommand">
+    <p><b>$ kubectl exec POD_NAME -c CONTAINER_NAME [flags] -- COMMAND [args...] [options] </b></p><br>
+</div>
+
+<div role="tabpanel" class="tab-pane" id="example">
+    <p><b>$ kubectl exec adapter -c adapter-container -it -- /bin/bash </b></p></div><br>
+</div>
 
 ---
 
