@@ -5,10 +5,6 @@ tags: [Kubernetes, kubectl]
 keywords: Kubernetes, kubectl
 sidebar: k8s_sidebar
 permalink: /kubectl-generate-yaml
-# simple_map: true
-# map_name: usermap
-# box_number: 1
-# folder: product2
 ---
 
 Let's say you need some YAML to make use of Kubernetes' powerful declarative nature, but you don't exactly know where to start. This is where the kubectl flags `--dry-run` and `-o` come in to help you generate your own YAML. Generating YAML from kubectl offers you minimal margin for error with ensuring your YAML configuration has the correct format when you go to deploy Kubernetes objects.
