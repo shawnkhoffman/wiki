@@ -4,7 +4,7 @@ summary: "How to get help on Kubernetes object attributes and work with them"
 tags: [Kubernetes, kubectl]
 keywords: Kubernetes, kubectl
 sidebar: k8s_sidebar
-permalink: /kubectl-get-help
+permalink: /kubectl-get-help-on-k8s-object-attributes
 ---
 
 It is crucial to know how to work with Kubernetes objects, which are what you use to deploy your application architecture; however, unfortunately there are far too many objects in Kubernetes to memorize, and it is impossible to memorize every attribute for every object, so it is a far better use of your time to instead remember *where to look* whenever you need to work with one.
