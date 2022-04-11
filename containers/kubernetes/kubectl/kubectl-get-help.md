@@ -46,7 +46,7 @@ $ kubectl explain pods.metadata.labels
 $ kubectl explain pods.metadata.namespace
 ```
 
-By the end of it, you might have yourself a really nice configuration file.
+By the end of it, you might have yourself a really nice configuration file to deploy resources with.
 
 ```yaml
 apiVersion: v1
