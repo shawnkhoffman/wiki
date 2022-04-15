@@ -39,15 +39,20 @@ folder: kubernetes
                <div class="panel-heading">kubectl</div>
                <div class="panel-body">
                  The default command line tool for communicating with a Kubernetes cluster's control plane, using the Kubernetes API.
-                  <ul>
-                {% for page in site.pages %}
-                {% for tag in page.tags %}
-                {% if tag == "kubectl" %}
-                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %} 
-                  </ul>
+                  <<ul>
+                    {% assign counter = '0' %}
+                    {% for page in site.pages %}
+                      {% for tag in page.tags %}
+                        {% if tag == "kubectl" and counter < '3' %}
+                          {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                          <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                </ul>
+                <ul>
+                  <li><a href="/content-kubectl">See more</a></li>
+                </ul>
                </div>
             </div>
     
@@ -61,13 +66,18 @@ folder: kubernetes
             <div class="panel-body">
               The smallest deployable units of computing that you can create and manage in Kubernetes.
                 <ul>
+                    {% assign counter = '0' %}
                     {% for page in site.pages %}
-                    {% for tag in page.tags %}
-                    {% if tag == "Pods" %}
-                    <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
-                    {% endif %}
+                      {% for tag in page.tags %}
+                        {% if tag == "Pods" and counter < '3' %}
+                          {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                          <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        {% endif %}
+                      {% endfor %}
                     {% endfor %}
-                    {% endfor %}
+                </ul>
+                <ul>
+                  <li><a href="/content-pods">See more</a></li>
                 </ul>
             </div>
         </div>
@@ -82,15 +92,20 @@ folder: kubernetes
                <div class="panel-heading">Scheduler</div>
                <div class="panel-body">
                 A control plane process that assigns Pods to Nodes.
-                  <ul>
-                {% for page in site.pages %}
-                {% for tag in page.tags %}
-                {% if tag == "Scheduler" %}
-                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %}
-                  </ul>
+                <ul>
+                  {% assign counter = '0' %}
+                  {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                      {% if tag == "Scheduler" and counter < '3' %}
+                        {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+              </ul>
+              <ul>
+                <li><a href="/content-k8s-scheduler">See more</a></li>
+              </ul>
                </div>
             </div>
 
@@ -101,15 +116,20 @@ folder: kubernetes
       <div class="panel panel-default">
                <div class="panel-heading">Ingress Controller</div>
                <div class="panel-body">Responsible for fulfilling the Ingress, usually with a load balancer, though it may also configure your edge router or additional frontends to help handle the traffic.
-               <ul>
-                {% for page in site.pages %}
-                {% for tag in page.tags %}
-                {% if tag == "Ingress Controller" %}
-                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %} 
-               </ul>
+                <ul>
+                  {% assign counter = '0' %}
+                  {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                      {% if tag == "Ingress Controller" and counter < '3' %}
+                        {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+              </ul>
+              <ul>
+                <li><a href="/content-k8s-ingress-controller">See more</a></li>
+              </ul>
             </div>
          </div>
 
@@ -120,15 +140,20 @@ folder: kubernetes
            <div class="panel panel-default">
                <div class="panel-heading">Kubernetes API</div>
                <div class="panel-body">Lets you query and manipulate the state of API objects in Kubernetes (for example: Pods, Namespaces, ConfigMaps, and Events).
-                   <ul>
-                {% for page in site.pages %}
-                {% for tag in page.tags %}
-                {% if tag == "Kubernetes API" %}
-                  <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %}
-                   </ul>
+                <ul>
+                  {% assign counter = '0' %}
+                  {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                      {% if tag == "Kubernetes API" and counter < '3' %}
+                        {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+              </ul>
+              <ul>
+                <li><a href="/content-k8s-api">See more</a></li>
+              </ul>
                </div>
             </div>
 
@@ -140,15 +165,20 @@ folder: kubernetes
                <div class="panel-heading">AKS</div>
                <div class="panel-body">
                 Azure Kubernetes Service (AKS): Azure's managed Kubernetes service with hardened security and fast delivery.
-                  <ul>
-                {% for page in site.pages %}
-                {% for tag in page.tags %}
-                {% if tag == "AKS" %}
-                     <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
-                {% endif %}
-                {% endfor %}
-                {% endfor %} 
-                  </ul>
+                <ul>
+                  {% assign counter = '0' %}
+                  {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                      {% if tag == "AKS" and counter < '3' %}
+                        {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+              </ul>
+              <ul>
+                <li><a href="/content-k8s-aks">See more</a></li>
+              </ul>
                </div>
             </div>
 
@@ -161,14 +191,19 @@ folder: kubernetes
               <div class="panel-body">
                 Amazon's Elastic Kubernetes Service (EKS) is a managed service and certified Kubernetes conformant to run Kubernetes on AWS and on-premises.
                 <ul>
-              {% for page in site.pages %}
-              {% for tag in page.tags %}
-              {% if tag == "EKS" %}
-                    <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
-              {% endif %}
-              {% endfor %}
-              {% endfor %} 
-                </ul>
+                  {% assign counter = '0' %}
+                  {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                      {% if tag == "EKS" and counter < '3' %}
+                        {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                      {% endif %}
+                    {% endfor %}
+                  {% endfor %}
+              </ul>
+              <ul>
+                <li><a href="/content-k8s-eks">See more</a></li>
+              </ul>
               </div>
           </div>
 
