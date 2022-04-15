@@ -1,11 +1,11 @@
 ---
 title: Adapter Container Pattern
-keywords: Kubernetes, Pods
+keywords: Kubernetes, Pod
 summary: "When you would use the Adapter Container Pattern on a Pod, with examples"
 sidebar: k8s_sidebar
 permalink: /k8s-adapter-container-pattern
 folder: pods
-tags: [Kubernetes, Pods]
+tags: [Kubernetes, Pods, Kubernetes Patterns]
 ---
 
 An **Adapter container** is one that *adapts* the output of the primary container on a pod. An example use case for this is when you need to standardize and normalize the data output from the primary container into a specification that fits the standards across your applications without any change to application code or logic.
