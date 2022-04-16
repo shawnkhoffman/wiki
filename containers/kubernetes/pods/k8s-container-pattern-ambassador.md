@@ -106,7 +106,7 @@ If you want to run commands on your Ambassador container or just see how things 
 </div>
 
 <div role="tabpanel" class="tab-pane" id="example">
-    <p><b>$ kubectl exec ambassador -c ambassador-container -it -- /bin/bash </b></p></div><br>
+    <p><b>$ kubectl exec ambassador -c ambassador-container -it -- sh </b></p></div><br>
 </div>
 
 ---

@@ -63,7 +63,7 @@ If you want to run commands on your Adapter container or just see how things are
 </div>
 
 <div role="tabpanel" class="tab-pane" id="example">
-    <p><b>$ kubectl exec adapter -c adapter-container -it -- /bin/bash </b></p></div><br>
+    <p><b>$ kubectl exec adapter -c adapter-container -it -- sh </b></p></div><br>
 </div>
 
 ---

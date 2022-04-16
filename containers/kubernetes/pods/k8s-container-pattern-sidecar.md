@@ -63,7 +63,7 @@ If you want to run commands on your Sidecar container or just see how things are
 </div>
 
 <div role="tabpanel" class="tab-pane" id="example">
-    <p><b>$ kubectl exec sidecar -c sidecar-container -it -- /bin/bash </b></p></div><br>
+    <p><b>$ kubectl exec sidecar -c sidecar-container -it -- sh </b></p></div><br>
 </div>
 
 ---
