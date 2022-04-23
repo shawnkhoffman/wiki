@@ -24,7 +24,7 @@ Furthermore, you may be able to significantly reduce the size of an image by usi
 
 ## A Multi-Stage Dockerfile
 
-In some example code below, I have a tiny HTTP server written in Go. It contains only a single API handler that listens on `localhost` at port `8080`:
+In the example code below, I have a tiny HTTP server written in Go. It contains only a single API handler that listens on `localhost` at port `8080`:
 
 ```go
 package main
@@ -53,7 +53,6 @@ In my Dockerfile, I have defined a Multi-Stage Build for my Go API handler:
 
 ```dockerfile
 FROM golang:alpine AS builder
-
 WORKDIR /go/src/app
 COPY main.go .
 
@@ -67,7 +66,7 @@ COPY --from=builder /go/src/app/ /app/
 CMD ["./webserver"]
 ```
 
-Note the `--from` argument next to the second `COPY` stanza; the result of this command is that the binary that exists in `/go/src/app` once the first image is built will be copied over to the second image.
+Note the `--from` argument next to the second `COPY` stanza; the result of this command is that the binary that exists in the `/go/src/app` directory of the first image will be copied over to the second image.
 
 I could then build an image from this single Dockerfile to end up with an image of ~10 MB in size — a *significant* difference — and then test the image in a container using `docker run -p "8080:8080" webserver`.
 
