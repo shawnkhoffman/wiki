@@ -1,6 +1,6 @@
 ---
 title: Using Multi-Stage builds
-keywords: Docker, Docker Best Practices
+keywords: Docker, Builds
 summary: "How to use Docker Multi-Stage builds"
 sidebar: docker_sidebar
 permalink: /docker-multi-stage-build
