@@ -20,7 +20,7 @@ Also, Docker images can become much larger than they really need to be. The reas
 
 Both of the points above imply inherent quality and security issues; the larger your image is, the bulkier your deployments, and perhaps the larger your attack surface on the container, will be. Also, more steps your build process requires more maintenance.
 
-Furthermore, you may be able to significantly reduce the size of an image by using a Multi-Stage Build defined in your Dockerfile.
+Furthermore, you may be able to significantly reduce the size of an image, and orchestrate your build process more efficiently, by using a Multi-Stage Build defined in your Dockerfile.
 
 ## A Multi-Stage Dockerfile
 
