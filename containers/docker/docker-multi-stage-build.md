@@ -49,7 +49,7 @@ If I put this into a Docker image using the base `golang` image from Docker Hub,
 
 In a compiled language like Go, you might rely on several dependencies. And if you handle dependencies with something like Go `dep`, you will need a Git client which then requires SSH to clone any needed source code, all just to end up with a tiny binary. But instead of building the process of dependency management into your image, it would be more efficient to build an image with just that tiny binary.
 
-In my Dockerfile example below, I have defined a Multi-Stage Build for my Go API handler:
+In my Dockerfile, I have defined a Multi-Stage Build for my Go API handler:
 
 ```dockerfile
 FROM golang:alpine AS builder
