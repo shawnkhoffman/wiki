@@ -1,5 +1,5 @@
 ---
-title: Using Multi-Stage builds
+title: Using Multi-Stage Builds
 keywords: Docker, Builds
 summary: "How to use Docker Multi-Stage builds"
 sidebar: docker_sidebar
@@ -80,4 +80,4 @@ Authored by: Shawn Hoffman
 
 **References:**
 
-- [Docker. Using multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
+- [Docker. Use multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)
