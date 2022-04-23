@@ -68,9 +68,11 @@ CMD ["./webserver"]
 
 Note the `--from` argument next to the second `COPY` stanza; the result of this command is that the binary that exists in the `/go/src/app` directory of the first image will be copied over to the second image.
 
-I could then build an image from this single Dockerfile to end up with an image of ~10 MB in size — a *significant* difference — and then test the image in a container using `docker run -p "8080:8080" webserver`.
+I could then build an image from this single Dockerfile to end up with an image of ~10 MB in size — a *significant* difference. The `alpine` image is extremely small in size at ~5 MB. I could even take this a step further and build the new image from `SCRATCH`, but this might be overkill — especially if I needed some tools available on the container for troubleshooting, such as `sh`.
 
-Also, when you run `docker build` with a Multi-Stage Dockerfile, you can observe during the build process that the old image is discarded once the new image is being built at each stage of your build. Thus, you only end up with one image instead of two.
+If I wanted to test this image, I could run `docker run -p "8080:8080" webserver`.
+
+Also, when you run `docker build` with a Multi-Stage Dockerfile, you can observe during the build process that the old image is discarded once the new image is being built at each stage of your build. Thus, you end up with only one final image.
 
 ---
 
