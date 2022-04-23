@@ -18,7 +18,7 @@ Before Multi-Stage Builds, it was common to see multiple Dockerfiles on a single
 
 Also, Docker images can become much larger than they really need to be. The reason for this varies, but in some scenarios an image contains more than it actually needs to run the application that runs on the container. It's inefficient to have a ~700 MB image if you have a small application written in a language that compiles to a single binary.
 
-Both of the points above imply inherent quality and security issues; the more steps your build process consists of, and the larger your image is, the bulkier your deployments, and perhaps the larger your attack surface on the container, will be.
+Both of the points above imply inherent quality and security issues; the larger your image is, the bulkier your deployments, and perhaps the larger your attack surface on the container, will be. Also, more steps your build process requires more maintenance.
 
 Furthermore, you may be able to significantly reduce the size of an image by using a Multi-Stage Build defined in your Dockerfile.
 
