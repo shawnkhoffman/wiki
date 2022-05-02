@@ -18,13 +18,14 @@ folder: docker
 
       <div class="filter-options">
       <button class="btn btn-primary" data-group="all">All</button>
-      <button class="btn btn-primary" data-group="builds">Builds</button>
+      <button class="btn btn-primary" data-group="Builds">Builds</button>
+      <button class="btn btn-primary" data-group="Container Security">Security</button>
     </div>      
 
 <div id="grid" class="row">
 
 
-    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["builds"]'>
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Builds"]'>
 
                <div class="panel panel-default">
                <div class="panel-heading">Builds</div>
@@ -46,9 +47,32 @@ folder: docker
                 </ul>
                </div>
             </div>
-
-    
     </div>
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Container Security"]'>
+
+      <div class="panel panel-default">
+      <div class="panel-heading">Security</div>
+      <div class="panel-body">
+        Practices for securing images, containers, hosts, and registries.
+         <ul>
+           {% assign counter = '0' %}
+           {% for page in site.pages %}
+             {% for tag in page.tags %}
+               {% if tag == "Container Security" and counter < '3' %}
+                 {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                 <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+               {% endif %}
+             {% endfor %}
+           {% endfor %}
+       </ul>
+       <ul>
+         <li><a href="/content-kubectl">See more</a></li>
+       </ul>
+      </div>
+   </div>
+
+
+</div>
     </div><!-- /#grid -->
 
 {% unless site.output == "pdf" %}
