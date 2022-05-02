@@ -12,7 +12,7 @@ There are a few things you should consider when you think of what might be scale
 
 These recommendations address only how you might consider building your Dockerfiles with a methodical security approach, respectively.
 
-## Evalutate your Base Images
+## Evaluate your Base Images
 
 The first line of a Dockerfile is a `FROM` stanza, indicating a base image that the new image is built from.
 
