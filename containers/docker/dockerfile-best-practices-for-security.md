@@ -34,7 +34,7 @@ The `USER` stanza in a Dockerfile specifies that the default user identity for r
 
 The Dockerfile `RUN` stanza lets you run any arbitrary command. If an attacker can compromise the Dockerfile with the default security settings, that attacker can run any code of their choosing. Following the principle of least privilege, only enable the permissions to run arbitrary container builds on your system to people who require them. Also, make sure that privileges to edit Dockerfiles are limited to trusted members of your team, and pay close attention to code reviewing these changes. You might even want to institute a check or an audit log when any new or modified `RUN` commands are introduced in your Dockerfiles.
 
-## Volume mounts
+## Considerations for Volume mounts
 
 Particularly for demos or tests, we often mount host directories into a container through volume mounts. It's important to check that Dockerfiles don't mount sensitive directories like the host's root directory, `/etc`, or `/bin` into a container, and mounting the entire filesystem would do this inherently.
 
