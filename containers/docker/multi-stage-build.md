@@ -1,11 +1,11 @@
 ---
 title: Using Multi-Stage Builds
-keywords: Docker, Builds
+keywords: Docker, Container Builds
 summary: "How to use Docker Multi-Stage builds"
 sidebar: docker_sidebar
 permalink: /docker-multi-stage-build
 folder: docker
-tags: [Docker, Builds]
+tags: [Docker, Container Builds]
 ---
 
 ## What is a Multi-Stage Build?
