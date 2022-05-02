@@ -35,7 +35,7 @@ folder: docker
                     {% assign counter = '0' %}
                     {% for page in site.pages %}
                       {% for tag in page.tags %}
-                        {% if tag == "Builds" and counter < '3' %}
+                        {% if tag == "Container Builds" and counter < '3' %}
                           {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
                           <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
                         {% endif %}
