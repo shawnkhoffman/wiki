@@ -1,0 +1,76 @@
+---
+title: Bash Wiki
+tags: [Bash, Linux]
+keywords: Bash, Linux
+sidebar: nix_bash_sidebar
+permalink: /wiki-bash
+folder: bash
+---
+
+{% if site.output == "pdf" %}
+{{site.data.alerts.note}} The content on this page doesn't display well on PDF.  {{site.data.alerts.end}}
+{% endif %}
+
+{% unless site.output == "pdf" %}
+<script src="js/jquery.shuffle.min.js"></script>
+<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+{% endunless %}
+
+      <div class="filter-options">
+      <button class="btn btn-primary" data-group="all">All</button>
+      <button class="btn btn-primary" data-group="Commands">Commands</button>
+      <!-- <button class="btn btn-primary" data-group="Container Security">Security</button> -->
+    </div>      
+
+<div id="grid" class="row">
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Commands"]'>
+        <div class="panel panel-default">
+            <div class="panel-heading">Commands</div>
+            <div class="panel-body">
+                Ways to use, extend, and create Bash commands.
+                <ul>
+                    {% assign counter = '0' %}
+                    {% for page in site.pages %}
+                        {% for tag in page.tags %}
+                        {% if tag == "Bash Commands" and counter < '3' %}
+                            {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                            <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        {% endif %}
+                        {% endfor %}
+                    {% endfor %}
+                </ul>
+                <ul>
+                    <li><a href="/content-bash commands">See more</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Scripting"]'>
+        <div class="panel panel-default">
+            <div class="panel-heading">Scripting</div>
+            <div class="panel-body">
+                Practices for securing images, containers, hosts, and registries.
+                <ul>
+                {% assign counter = '0' %}
+                {% for page in site.pages %}
+                    {% for tag in page.tags %}
+                    {% if tag == "Bash Scripting" and counter < '3' %}
+                        {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                    {% endif %}
+                    {% endfor %}
+                {% endfor %}
+                </ul>
+                <ul>
+                    <li><a href="/content-bash scripting">See more</a></li>
+                </ul>
+            </div>
+        </div>
+    </div> -->
+</div><!-- /#grid -->
+
+{% unless site.output == "pdf" %}
+{% include initialize_shuffle.html %}
+{% endunless %}
+
+{{site.data.alerts.note}} There is more coming to each subject in this wiki category as more content is added.{{site.data.alerts.end}}

@@ -4,6 +4,7 @@ summary: "How to get help on Kubernetes object attributes and work with them"
 tags: [Kubernetes, kubectl]
 keywords: Kubernetes, kubectl
 sidebar: k8s_sidebar
+folder: kubectl
 permalink: /kubectl-get-help-on-k8s-object-attributes
 ---
 
