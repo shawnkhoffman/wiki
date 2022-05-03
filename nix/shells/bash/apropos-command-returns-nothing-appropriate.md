@@ -33,6 +33,10 @@ After completion, I run the `apropos` command again:
 $ apropos network
 
 ctstat (8)           - unified linux network statistics
+dhclient-script (8)  - DHCP client network configuration script
+ethtool (8)          - query or control network driver and hardware settings
+ifenslave (8)        - Attach and detach slave network devices to a bonding device.
+ifstat (8)           - handy utility to read network interface statistics
 ...
 ```
 
