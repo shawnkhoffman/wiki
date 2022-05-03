@@ -1,7 +1,7 @@
 ---
 title: "Error: man -k (apropos) returns 'nothing appropriate'"
 keywords: Bash Commands, Linux
-summary: "Why you're getting this error, and how to fix it"
+summary: "You don't remember the name of a Bash command you need, so you use man -k or apropos to search for it by keyword. Instead of the output you expected, you get the error: 'nothing appropriate'. Here's why this error usually occurs, and how you can fix it."
 sidebar: nix_bash_sidebar
 permalink: /bash-man-k-or-apropos-returns-nothing-appropriate
 folder: docker
@@ -26,6 +26,8 @@ $ sudo mandb
 Processing manual pages under /usr/share/man...
 ...
 ```
+
+I could also throw in the `-c` option to create the database caches from scratch, rather than updating them.
 
 After completion, I run the `apropos` command again:
 
