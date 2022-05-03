@@ -43,3 +43,13 @@ ifstat (8)           - handy utility to read network interface statistics
 ```
 
 And, as you can see, now it works.
+
+---
+
+Authored by: Shawn Hoffman
+
+<br>
+
+**References:**
+- [ManKier. apropos(1)](https://www.mankier.com/1/apropos.mandoc)
+- [ManKier. mandb(8)](https://www.mankier.com/8/mandb)
