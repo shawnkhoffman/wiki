@@ -8,7 +8,7 @@ folder: docker
 tags: [Bash Commands, Linux]
 ---
 
-Because it is virtually *impossible* to remember every single Bash command, the `man -k` or `apropos` command serves as one of the most useful commands available.
+Because it is virtually impossible to remember every single Bash command, the `man -k` or `apropos` command serves as one of the most useful commands available.
 
 You may already be aware that `man -k` is equivalent to `apropos`; therefore, I will be using `apropos` throughout the remainder of this demonstration.
 
@@ -33,10 +33,6 @@ After completion, I run the `apropos` command again:
 $ apropos network
 
 ctstat (8)           - unified linux network statistics
-dhclient-script (8)  - DHCP client network configuration script
-ethtool (8)          - query or control network driver and hardware settings
-ifenslave (8)        - Attach and detach slave network devices to a bonding device.
-ifstat (8)           - handy utility to read network interface statistics
 ...
 ```
 
