@@ -46,12 +46,6 @@ ifstat (8)           - handy utility to read network interface statistics
 ...
 ```
 
-And, as you can see, now it works.
+And, as you can see, it now works.
 
-<!-- ---
-
-<br>
-
-**References:**
-- [ManKier. apropos(1)](https://www.mankier.com/1/apropos.mandoc)
-- [ManKier. mandb(8)](https://www.mankier.com/8/mandb) -->
+Furthermore, for ease of administration it may be a good idea to have `mandb` running periodically off of a cron job depending on your installation.
