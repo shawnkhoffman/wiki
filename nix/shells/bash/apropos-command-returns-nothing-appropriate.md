@@ -1,11 +1,11 @@
 ---
 title: "Error: man -k (apropos) returns 'nothing appropriate'"
-keywords: Bash Commands, Linux
+keywords: Bash Commands
 summary: "You don't remember the name of a Bash command you need, so you use man -k or apropos to search for it by keyword. Instead of the output you expected, you get the error: 'nothing appropriate'. Here's why this error usually occurs, and how you can fix it."
 sidebar: nix_bash_sidebar
 permalink: /bash-man-k-or-apropos-returns-nothing-appropriate
 folder: docker
-tags: [Bash Commands, Linux]
+tags: [Bash Commands]
 ---
 
 Because it is virtually impossible to remember every single Bash command, the `man -k` or `apropos` command serves as one of the most useful commands available.
