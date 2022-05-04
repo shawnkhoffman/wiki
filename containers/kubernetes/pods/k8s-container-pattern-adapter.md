@@ -1,11 +1,15 @@
 ---
 title: Adapter Container Pattern
-keywords: Kubernetes, Pod
+authors: Shawn Hoffman
+editors: 
 summary: "When you would use the Adapter Container Pattern on a Pod, with examples"
-sidebar: k8s_sidebar
-permalink: /k8s-adapter-container-pattern
-folder: pods
 tags: [Kubernetes, Pods, Kubernetes Patterns]
+keywords: Kubernetes, Pod
+references: https://hub.docker.com/r/nginx/nginx-prometheus-exporter
+permalink: /k8s-adapter-container-pattern
+
+folder: pods
+sidebar: k8s_sidebar
 ---
 
 An **Adapter container** is one that *adapts* the output of the primary container on a pod. An example use case for this is when you need to standardize and normalize the data output from the primary container into a specification that fits the standards across your applications without any change to application code or logic.
@@ -65,13 +69,3 @@ If you want to run commands on your Adapter container or just see how things are
 <div role="tabpanel" class="tab-pane" id="example">
     <p><b>$ kubectl exec adapter -c adapter-container -it -- sh </b></p></div><br>
 </div>
-
----
-
-Authored by: Shawn Hoffman
-
-<br>
-
-**References:**
-
-- [nginx/nginx-prometheus-exporter](https://hub.docker.com/r/nginx/nginx-prometheus-exporter)

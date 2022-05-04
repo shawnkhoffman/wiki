@@ -1,11 +1,15 @@
 ---
 title: Sidecar Container Pattern
-keywords: Kubernetes, Pods
+authors: Shawn Hoffman
+editors: 
 summary: "When you would use the Sidecar Container Pattern on a Pod, with examples"
-sidebar: k8s_sidebar
-permalink: /k8s-sidecar-container-pattern
-folder: pods
 tags: [Kubernetes, Pods]
+keywords: Kubernetes, Pods
+references: https://docs.nginx.com/nginx/admin-guide/monitoring/logging/
+permalink: /k8s-sidecar-container-pattern
+
+folder: pods
+sidebar: k8s_sidebar
 ---
 
 A **Sidecar container** is one that *enhances* or *extends* the primary container on a pod, and this typically requires shared access to the same resources (e.g., *volumes* and the *network interface*) to exchange information. One such enhancement is logging or monitoring on your application. An example of this use case is Istio Service Mesh, which is a product used for monitoring and shaping traffic on Kubernetes. Istio adds a sidecar container to each pod in order to fetch the traffic telemetry that it needs. In this case, these containers belong together on the same pod.
@@ -65,13 +69,3 @@ If you want to run commands on your Sidecar container or just see how things are
 <div role="tabpanel" class="tab-pane" id="example">
     <p><b>$ kubectl exec sidecar -c sidecar-container -it -- sh </b></p></div><br>
 </div>
-
----
-
-Authored by: Shawn Hoffman
-
-<br>
-
-**References:**
-
-- [NGINX. Configuring logging](https://docs.nginx.com/nginx/admin-guide/monitoring/logging/)

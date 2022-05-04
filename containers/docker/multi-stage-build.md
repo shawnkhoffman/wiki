@@ -1,11 +1,15 @@
 ---
 title: Using Multi-Stage Builds
-keywords: Docker, Container Builds
-summary: "How to use Docker Multi-Stage builds"
-sidebar: docker_sidebar
-permalink: /docker-multi-stage-build
-folder: docker
+authors: Shawn Hoffman
+editors: 
+summary: "When and how to use Docker Multi-Stage builds"
 tags: [Docker, Container Builds]
+keywords: Docker, Container Builds
+references: https://docs.docker.com/develop/develop-images/multistage-build/
+permalink: /docker-multi-stage-build
+
+folder: docker
+sidebar: docker_sidebar
 ---
 
 ## What is a Multi-Stage Build?
@@ -73,13 +77,3 @@ I could then build an image from this single Dockerfile to end up with an image 
 If I wanted to test this image, I could run `docker run -p "8080:8080" webserver`.
 
 Also, when you run `docker build` with a Multi-Stage Dockerfile, you can observe during the build process that the old image is discarded once the new image is being built at each stage of your build. Thus, you end up with only one final image.
-
----
-
-Authored by: Shawn Hoffman
-
-<br>
-
-**References:**
-
-- [Docker. Use multi-stage builds](https://docs.docker.com/develop/develop-images/multistage-build/)

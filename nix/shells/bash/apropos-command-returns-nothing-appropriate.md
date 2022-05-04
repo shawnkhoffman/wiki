@@ -1,11 +1,15 @@
 ---
 title: "Error: man -k (apropos) returns 'nothing appropriate'"
-keywords: Bash Commands
+authors: Shawn Hoffman
+editors: 
 summary: "You don't remember the name of a Bash command you need, so you use man -k or apropos to search for it by keyword. Instead of the output you expected, you get the error: 'nothing appropriate'. Here's why this error usually occurs, and how you can fix it."
-sidebar: nix_bash_sidebar
-permalink: /bash-man-k-or-apropos-returns-nothing-appropriate
-folder: docker
 tags: [Bash Commands]
+keywords: Bash Commands
+references: https://www.mankier.com/1/apropos.mandoc, https://www.mankier.com/8/mandb
+permalink: /bash-man-k-or-apropos-returns-nothing-appropriate
+
+sidebar: nix_bash_sidebar
+folder: docker
 ---
 
 Because it is virtually impossible to remember every single Bash command, the `man -k` or `apropos` command serves as one of the most useful commands available.
@@ -44,12 +48,10 @@ ifstat (8)           - handy utility to read network interface statistics
 
 And, as you can see, now it works.
 
----
-
-Authored by: Shawn Hoffman
+<!-- ---
 
 <br>
 
 **References:**
 - [ManKier. apropos(1)](https://www.mankier.com/1/apropos.mandoc)
-- [ManKier. mandb(8)](https://www.mankier.com/8/mandb)
+- [ManKier. mandb(8)](https://www.mankier.com/8/mandb) -->

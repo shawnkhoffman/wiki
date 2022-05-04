@@ -1,11 +1,15 @@
 ---
 title: Init Container Pattern
-keywords: Kubernetes, Pods
+authors: Shawn Hoffman
+editors: 
 summary: "When you would use the Init Container Pattern on a Pod, with examples"
-sidebar: k8s_sidebar
-permalink: /k8s-init-container-pattern
-folder: pods
 tags: [Kubernetes, Pods]
+keywords: Kubernetes, Pods
+references: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/, https://hub.docker.com/r/mwendler/wget
+permalink: /k8s-init-container-pattern
+
+folder: pods
+sidebar: k8s_sidebar
 ---
 
 An **Init container** is an additional container in a pod that completes a task before the primary container is started. The purpose of this pattern is to decouple the primary application container from any initialization logic that it needs, similarly to how you would when you instantiate a new object with a constructor in any Object Oriented Programming language.
@@ -137,14 +141,3 @@ If you need to troubleshoot your init containers, or you just want to see how th
 When you get output, you can start by looking at information that `Events` will provide to you.
 
 If one of the symptoms of your issue is that one or more init containers seem to be hanging, take a look at the output under `Containers` and look for `State/Reason`; if the reason says *PodInitializing,* this means the init container is not finished with its assigned task, and if this is the case you can look at `Init Containers` to see its current status for further troubleshooting.
-
----
-
-Authored by: Shawn Hoffman
-
-<br>
-
-**References:**
-
-- [Kubernetes documentation. Init containers](https://kubernetes.io/docs/concepts/workloads/pods/init-containers/)
-- [mwendler/wget](https://hub.docker.com/r/mwendler/wget)

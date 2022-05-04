@@ -1,11 +1,15 @@
 ---
 title: Ambassador Container Pattern
-keywords: Kubernetes, Pods
+authors: Shawn Hoffman
+editors: 
 summary: "When you would use the Ambassador Container Pattern on a Pod, with examples"
-sidebar: k8s_sidebar
-permalink: /k8s-ambassador-container-pattern
-folder: pods
 tags: [Kubernetes, Pods]
+keywords: Kubernetes, Pods
+references: https://en.wikipedia.org/wiki/Reflective_programming, https://cloud.google.com/blog/products/databases/running-redis-on-gcp-four-deployment-scenarios
+permalink: /k8s-ambassador-container-pattern
+
+folder: pods
+sidebar: k8s_sidebar
 ---
 
 An **Ambassador container** is a form of *sidecar container* that serves as a *proxy* to the primary container on a pod. It is used as a proxy between the application container and one or more outside services; this is ideal when you don't want the primary container on the pod to be exposed and you instead want routing to go through the ambassador, allowing it to be a *representative* of your primary container. It also forms an abstraction layer so that the application developer can focus on the application itself without worrying about the infrastructure connectivity details.
@@ -108,14 +112,3 @@ If you want to run commands on your Ambassador container or just see how things 
 <div role="tabpanel" class="tab-pane" id="example">
     <p><b>$ kubectl exec ambassador -c ambassador-container -it -- sh </b></p></div><br>
 </div>
-
----
-
-Authored by: Shawn Hoffman
-
-<br>
-
-**References:**
-
-- [Wikipedia. Reflective programming](https://en.wikipedia.org/wiki/Reflective_programming)
-- [Google. Running Redis on GCP](https://cloud.google.com/blog/products/databases/running-redis-on-gcp-four-deployment-scenarios)

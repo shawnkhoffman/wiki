@@ -1,11 +1,13 @@
 ---
-title: FIPA Wiki
+title: FIPS Wiki
+summary: "This is my wiki on FIPS"
 tags: [Security, FIPS]
 keywords: Security, FIPS
-sidebar: security_sidebar
 permalink: /wiki-fips
-folder: fips
 toc: true
+
+sidebar: security_sidebar
+folder: fips
 ---
 
 FIPS

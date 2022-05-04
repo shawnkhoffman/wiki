@@ -1,11 +1,15 @@
 ---
 title: Dockerfile Best Practices for Security
-keywords: Docker, Container Security
+authors: Shawn Hoffman
+editors: 
 summary: "Recommendations to improve the security of your Docker images from the Dockerfile, thereby reducing the attack surface of containers running from those images"
-sidebar: docker_sidebar
-permalink: /dockerfile-best-practices-for-security
-folder: docker
 tags: [Docker, Container Security]
+keywords: Docker, Container Security
+references: https://hub.docker.com/_/alpine, https://github.com/GoogleContainerTools/distroless, https://github.com/mozilla/sops, https://man7.org/linux/man-pages/man7/capabilities.7.html
+permalink: /dockerfile-best-practices-for-security
+
+sidebar: docker_sidebar
+folder: docker
 ---
 
 There are a few things you should consider when you think of what might be scaled or distributed on your containers in addition to the applications that you have running on them, including any attack vectors that could be exploited.
@@ -71,16 +75,3 @@ The less code you have in a container, the smaller its attack surface will be. A
 ## Package everything that your container needs to run properly
 
 If the previous point exhorted you to exclude superfluous code from a build, this point is a corollary: do include everything that your application needs to operate. If you allow for the possibility of a container installing additional packages at runtime, how will you check that those packages are legitimate? It's far better to do all the installation and validation when the container image is built and create an immutable image.
-
----
-
-Authored by: Shawn Hoffman
-
-<br>
-
-**References:**
-
-- [Docker Hub. Alpine container image](https://hub.docker.com/_/alpine)
-- [GoogleContainerTools on GitHub. distroless container image](https://github.com/GoogleContainerTools/distroless)
-- [Mozilla on GitHub. SOPS](https://github.com/mozilla/sops)
-- [Linux manual page. Capabilities](https://man7.org/linux/man-pages/man7/capabilities.7.html)

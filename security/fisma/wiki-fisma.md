@@ -1,11 +1,13 @@
 ---
 title: FISMA Wiki
+summary: "This is my wiki on FISMA."
 tags: [Security, FISMA]
 keywords: Security, FISMA
-sidebar: security_sidebar
 permalink: /wiki-fisma
-folder: fisma
 toc: true
+
+folder: fisma
+sidebar: security_sidebar
 ---
 
 ## What is FISMA?
