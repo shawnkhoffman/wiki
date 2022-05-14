@@ -9,7 +9,7 @@ references: https://man7.org/linux/man-pages/man5/proc.5.html, https://en.wikipe
 permalink: /linux-admin-get-process-info-from-proc
 
 folder: docker
-sidebar: docker_sidebar
+sidebar: linux_admin_sidebar
 ---
 
 The **proc file system (procfs)** is a virtual file system created dynamically when the system boots, and is dissolved at system shut down.
