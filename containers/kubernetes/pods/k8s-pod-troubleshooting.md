@@ -1,9 +1,9 @@
 ---
-title: Troubleshooting Kubernetes Pods & Containers
+title: Troubleshooting Pods & Containers
 keywords: Kubernetes, Pod
 summary: "How to troubleshoot pods & containers"
 sidebar: k8s_sidebar
-permalink: /k8s-adapter-container-pattern
+permalink: /k8s-troubleshooting-pods-and-containers
 folder: pods
 tags: [Kubernetes, Pods]
 ---
