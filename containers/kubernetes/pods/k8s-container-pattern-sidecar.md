@@ -20,7 +20,8 @@ Here's another real world example of the Sidecar Pattern.
 
 Let's say you have a webserver container running on nginx. The access and error logs produced by the webserver are not critical enough to be placed on a persistent volume. However, developers need access to the last 24 hours of logs so that they can trace issues and bugs. Therefore, you need to ship the access and error logs from the webserver to a log aggregation service. Following the *separation of concerns* principle, you implement the sidecar design pattern and your configuration might look something like this:
 
-```yaml
+{% highlight yaml linenos %}
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -45,7 +46,8 @@ spec:
       volumeMounts:
         - name: logs
           mountPath: /var/log/nginx
-```
+
+{% endhighlight %}
 
 By deploying a second container that ships the error and access logs from nginx, you allow nginx to do what it does well, which is *serving web pages,* and you allow the second container to specialize in its task, which is *shipping logs.* Since containers are running on the same pod, you can share the `emptyDir` volume between them as a bind-mount to read and write logs.
 

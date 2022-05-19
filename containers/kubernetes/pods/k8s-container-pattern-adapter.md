@@ -20,7 +20,8 @@ A very common use case for this design pattern is for the Prometheus monitoring 
 
 Imagine you have a pod with a primary container running a web server on nginx, and you need to convert the output from the endpoint that nginx provides for querying the web server's status to the Prometheus standard format. Assuming you have enabled this endpoint on nginx in the `default.conf` file, your Pod configuration might look something like this:
 
-```yaml
+{% highlight yaml linenos %}
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -49,7 +50,8 @@ spec:
     args: ["-nginx.scrape-uri","http://localhost/nginx_status"]
     ports:
     - containerPort: 9113
-```
+
+{% endhighlight %}
 
 You can see two containers configured to this pod. The adapter container uses the `nginx/nginx-prometheus-exporter` image to handle the data conversion of the telemetry that nginx exposes on `/nginx_status` to the Prometheus format.
 

@@ -1,11 +1,15 @@
 ---
 title: Generating YAML from kubectl
+authors: Shawn Hoffman
+editors: 
 summary: "How to generate YAML for objects on Kubernetes"
 tags: [Kubernetes, kubectl]
 keywords: Kubernetes, kubectl
-sidebar: k8s_sidebar
-folder: kubectl
+references: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run, https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create, https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply, https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#replace
 permalink: /kubectl-generate-yaml
+
+folder: kubectl
+sidebar: k8s_sidebar
 ---
 
 Let's say you need some YAML to make use of Kubernetes' powerful declarative nature, but you don't exactly know where to start. This is where the kubectl flags `--dry-run` and `-o` come in to help you generate your own YAML. Generating YAML from kubectl offers you minimal margin for error with ensuring your YAML configuration has the correct format when you go to deploy Kubernetes objects.
@@ -48,7 +52,8 @@ The `-o` (output) flag allows you to tell kubectl which formatting you want the 
 
 The output will look something like this:
 
-```yaml
+{% highlight yaml linenos %}
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -67,7 +72,8 @@ spec:
   dnsPolicy: ClusterFirst
   restartPolicy: Always
 status: {}
-```
+
+{% endhighlight %}
 
 ## Send YAML output to a file
 
@@ -112,16 +118,3 @@ Using a YAML file you have generated, you can deploy the Kubernetes objects by u
     <p><b>kubectl replace -f test-nginx.yaml</b></p>
     </div>
 </div>
-
----
-
-Authored by: Shawn Hoffman
-
-<br>
-
-**References:**
-
-- [kubectl Reference: kubectl run](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run)
-- [kubectl Reference: kubectl create](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create)
-- [kubectl Reference: kubectl apply](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply)
-- [kubectl Reference: kubectl replace](https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#replace)

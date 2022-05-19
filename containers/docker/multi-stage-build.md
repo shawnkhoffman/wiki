@@ -30,7 +30,7 @@ Furthermore, you may be able to significantly reduce the size of an image, and o
 
 In the example code below, I have a tiny HTTP server written in Go. It contains only a single API handler that listens on `localhost` at port `8080`:
 
-```go
+{% highlight go linenos %}
 package main
 
 import (
@@ -47,7 +47,7 @@ func main() {
     http.HandleFunc("/", handler)
     log.Fatal(http.ListenAndServe("0.0.0.0:8080", nil))
 }
-```
+{% endhighlight %}
 
 If I put this into a Docker image using the base `golang` image from Docker Hub, it would probably sit at around ~700 MB. I *could* use the `alpine` version of the image, but that would only reduce the image size down to about 50% which is still over 1/4 of a GB in size — inefficient for a single container image.
 
@@ -55,7 +55,7 @@ In a compiled language like Go, you might rely on several dependencies. And if y
 
 In my Dockerfile, I have defined a Multi-Stage Build for my Go API handler:
 
-```dockerfile
+{% highlight docker linenos %}
 FROM golang:alpine AS builder
 WORKDIR /go/src/app
 COPY main.go .
@@ -68,7 +68,7 @@ WORKDIR /app
 COPY --from=builder /go/src/app/ /app/
 
 CMD ["./webserver"]
-```
+{% endhighlight %}
 
 Note the `--from` argument next to the second `COPY` stanza; the result of this command is that the binary that exists in the `/go/src/app` directory of the first image will be copied over to the second image.
 

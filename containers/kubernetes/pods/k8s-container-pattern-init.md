@@ -46,7 +46,8 @@ Let's say you're working with a MySQL database and you need to seed it with some
 
 Your pod definition might look something like this:
 
-```yaml
+{% highlight yaml linenos %}
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -73,7 +74,8 @@ spec:
   volumes:
     - emptyDir: {}
       name: dump
-```
+
+{% endhighlight %}
 
 The above configuration creates a pod that hosts two containers: the init continer, which is defined in `initContainers`, and the primary container which uses the `mysql` database image. The init container uses the `mwendler/wget` image because only the wget command is needed to download the SQL file that contains the database dump. The destination directory for the downloaded SQL file is the default directory used by the MySQL image to execute SQL files: `/docker-entrypoint-initdb.d`.
 
@@ -85,7 +87,8 @@ The init container mounts `/docker-entrypoint-initdb.d` to an `emptyDir` volume,
 
 In another scenario, you have an application that needs to wait until another service is available and responding to requests. Let's say the service is called `myservice` and has the following Service configuration:
 
-```yaml
+{% highlight yaml linenos %}
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -95,11 +98,13 @@ spec:
   - protocol: TCP
     port: 80
     targetPort: 9376
-```
+
+{% endhighlight %}
 
 Therefore, you might have a pod configuration that looks similar to this:
 
-```yaml
+{% highlight yaml linenos %}
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -115,7 +120,8 @@ spec:
   - name: myapp-container
     image: busybox:1.28
     command: ['sh', '-c', 'echo The app is running! && sleep 3600']
-```
+
+{% endhighlight %}
 
 The application, running on `myapp-container`, does not function correctly until `myservice` is available; so, you need to delay the `myapp` application until `myservice` is ready. You could handle this by using a simple `nslookup` command on the init container to constantly check for the successful name resolution of `myservice`. If nslookup is able to resolve `myservice`, then the service is started. Therefore, when the script on the init container exits with a successful status, the init container terminates, giving way for the application container to start. Otherwise, the container sleeps for two seconds before trying again, delaying the application container start.
 

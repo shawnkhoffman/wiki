@@ -1,17 +1,18 @@
 ---
 title: Current user or role does not have access to Kubernetes objects
+authors: Shawn Hoffman
+editors: 
 summary: "<br>
 When you deploy or access EKS for the first time, you might receive the following error from the AWS Console: </br>
 </br>
 Your current user or role does not have access to Kubernetes objects on this EKS cluster. This may be due to the current user or role not having Kubernetes RBAC permissions to describe cluster resources or not having an entry in the cluster’s auth config map."
 tags: [Kubernetes, EKS]
 keywords: Kubernetes, EKS
+references: https://aws.amazon.com/premiumsupport/knowledge-center/eks-kubernetes-object-access-error/
+permalink: /eks-current-user-or-role-does-not-have-access-to-k8s-objects
+
 sidebar: eks_sidebar
 folder: eks
-permalink: /eks-current-user-or-role-does-not-have-access-to-k8s-objects
-# simple_map: true
-# map_name: usermap
-# box_number: 1
 ---
 
 ## Why this happens
@@ -30,7 +31,8 @@ If the user needs full administrator access to the EKS cluster, you can bind the
 
 If you handle authorization at the role-level, the respective role needing access would need to be to added to `mapRoles` inside the ConfigMap `aws-auth`. However, if authorization is handled at the user-level, you can pass in the AWS account's ARN into `mapUsers`.
 
-```yaml
+{% highlight yaml linenos %}
+
 ---
 kind: ConfigMap
 metadata:
@@ -48,7 +50,8 @@ data:
       username: devops
       groups:
         - system:masters
-```
+
+{% endhighlight %}
 
 ### Option 2 (the most secure): Create a new ClusterRole
 
@@ -56,7 +59,8 @@ There is another option that is more secure and allows you to follow the princip
 
 1.) First, I create the ClusterRole:
 
-```yaml
+{% highlight yaml linenos %}
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRole
@@ -89,11 +93,13 @@ rules:
     verbs:
     - get
     - list
-```
+
+{% endhighlight %}
 
 2.) Next, I bind the ClusterRole with a group.
 
-```yaml
+{% highlight yaml linenos %}
+
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
@@ -107,11 +113,13 @@ roleRef:
 kind: ClusterRole
 name: eks-console
 apiGroup: rbac.authorization.k8s.io
-```
+
+{% endhighlight %}
 
 3.) And finally, I edit the Kubernetes ConfigMap `aws-auth` and pass in the AWS role's ARN with the Kubernetes group `eks-console`.
 
-```yaml
+{% highlight yaml linenos %}
+
 ---
 kind: ConfigMap
 metadata:
@@ -133,14 +141,5 @@ data:
       username: devops
       groups:
         - system:masters
-```
 
----
-
-Authored by: Shawn Hoffman
-
-<br>
-
-**References:**
-
-- [AWS Knowledge Center: "How do I resolve the 'Your current user or role does not have access to Kubernetes objects on this EKS cluster' error in Amazon EKS?"](https://aws.amazon.com/premiumsupport/knowledge-center/eks-kubernetes-object-access-error/)
+{% endhighlight %}

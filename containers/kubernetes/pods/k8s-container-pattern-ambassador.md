@@ -24,7 +24,8 @@ Another well-known use case for the Ambassador container is when your applicatio
 
 Let's say in your production environment you have more than one Redis instance setup for high availability, and so you need to configure your application to select a healthy node and then connect to it. You can configure an Ambassador container that proxies those connections, and your configuration may look something like this:
 
-```yaml
+{% highlight yaml linenos %}
+
 apiVersion: v1
 kind: Pod
 metadata:
@@ -33,7 +34,6 @@ spec:
   containers:
   - name: redis-client
     image: redis
-
   - name: ambassador-container
     image: malexer/twemproxy
     env:
@@ -41,13 +41,15 @@ spec:
       value: redis-st-0.redis-svc.default.svc.cluster.local:6379:1 redis-st-1.redis-svc.default.svc.cluster.local:6379:1
     ports:
     - containerPort: 6380
-```
+
+{% endhighlight %}
 
 The above Pod definition defines two containers: the application container running the Redis image as a client to other Redis servers, and the Ambassador container running the `malexer/twemproxy` image, which is an open source proxy server that provides a way to evenly distribute cached data between multiple Redis instances to improve the performance, reliability, and resilience of a distributed system, and it is one of Google's recommended solutions for managing a cluster of Memorystore instances on GCP. You can also see that the Ambassador container is listening to `localhost` because it shares the same Pod as the application container, it listens to port 6380 as a default configuration for this image, and it has the Redis instances passed in as environment variables – in the form of `address:port:weight`, as required.
 
 At this point, we only need the two Redis instances that the Ambassador container is configured to communicate with. The following StatefulSet definition creates them:
 
-```yaml
+{% highlight yaml linenos %}
+
 apiVersion: v1
 kind: Service
 metadata:
@@ -94,7 +96,8 @@ spec:
       resources:
         requests:
           storage: 1Gi
-```
+
+{% endhighlight %}
 
 ## Interacting with your Ambassador container
 
