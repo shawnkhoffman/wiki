@@ -3,7 +3,6 @@ title: Linux Admin Wiki
 summary: "This is my wiki on Linux Administration."
 tags: [Linux, Linux Administration]
 keywords: Linux, Linux Administration
-permalink: /wiki-linux-admin
 toc: false
 
 folder: nix
@@ -15,8 +14,8 @@ sidebar: linux_admin_sidebar
 {% endif %}
 
 {% unless site.output == "pdf" %}
-<script src="js/jquery.shuffle.min.js"></script>
-<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+<script src="/js/jquery.shuffle.min.js"></script>
+<script src="/js/jquery.ba-throttle-debounce.min.js"></script>
 {% endunless %}
 
       <div class="filter-options">
@@ -37,7 +36,7 @@ sidebar: linux_admin_sidebar
                     {% for tag in page.tags %}
                     {% if tag == "Linux Processes" and counter < '3' %}
                     {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                    <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                    <li><a href="{{page.url}}">{{page.title}}</a></li>
                     {% endif %}
                     {% endfor %}
                     {% endfor %}

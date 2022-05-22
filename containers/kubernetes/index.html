@@ -3,7 +3,6 @@ title: Kubernetes Wiki
 summary: "This is my wiki on Kubernetes."
 tags: [Kubernetes, Containers]
 keywords: Kubernetes, Containers
-permalink: /wiki-kubernetes
 toc: false
 
 folder: kubernetes
@@ -19,8 +18,8 @@ sidebar: k8s_sidebar
 {% endif %}
 
 {% unless site.output == "pdf" %}
-<script src="js/jquery.shuffle.min.js"></script>
-<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+<script src="/js/jquery.shuffle.min.js"></script>
+<script src="/js/jquery.ba-throttle-debounce.min.js"></script>
 {% endunless %}
 
       <div class="filter-options">
@@ -49,7 +48,7 @@ sidebar: k8s_sidebar
                       {% for tag in page.tags %}
                         {% if tag == "kubectl" and counter < '3' %}
                           {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                          <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                          <li><a href="{{page.url}}">{{page.title}}</a></li>
                         {% endif %}
                       {% endfor %}
                     {% endfor %}
@@ -75,7 +74,7 @@ sidebar: k8s_sidebar
                       {% for tag in page.tags %}
                         {% if tag == "Pods" and counter < '3' %}
                           {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                          <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                          <li><a href="{{page.url}}">{{page.title}}</a></li>
                         {% endif %}
                       {% endfor %}
                     {% endfor %}
@@ -102,7 +101,7 @@ sidebar: k8s_sidebar
                     {% for tag in page.tags %}
                       {% if tag == "Scheduler" and counter < '3' %}
                         {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        <li><a href="{{page.url}}">{{page.title}}</a></li>
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
@@ -126,7 +125,7 @@ sidebar: k8s_sidebar
                     {% for tag in page.tags %}
                       {% if tag == "Ingress Controller" and counter < '3' %}
                         {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        <li><a href="{{page.url}}">{{page.title}}</a></li>
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
@@ -150,7 +149,7 @@ sidebar: k8s_sidebar
                     {% for tag in page.tags %}
                       {% if tag == "Kubernetes API" and counter < '3' %}
                         {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        <li><a href="{{page.url}}">{{page.title}}</a></li>
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
@@ -175,7 +174,7 @@ sidebar: k8s_sidebar
                     {% for tag in page.tags %}
                       {% if tag == "AKS" and counter < '3' %}
                         {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        <li><a href="{{page.url}}">{{page.title}}</a></li>
                       {% endif %}
                     {% endfor %}
                   {% endfor %}
@@ -200,7 +199,7 @@ sidebar: k8s_sidebar
                     {% for tag in page.tags %}
                       {% if tag == "EKS" and counter < '3' %}
                         {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                        <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        <li><a href="{{page.url}}">{{page.title}}</a></li>
                       {% endif %}
                     {% endfor %}
                   {% endfor %}

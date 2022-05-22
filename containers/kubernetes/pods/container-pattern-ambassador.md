@@ -6,7 +6,6 @@ summary: "When you would use the Ambassador Container Pattern on a Pod, with exa
 tags: [Kubernetes, Pods]
 keywords: Kubernetes, Pods
 references: https://en.wikipedia.org/wiki/Reflective_programming, https://cloud.google.com/blog/products/databases/running-redis-on-gcp-four-deployment-scenarios
-permalink: /k8s-ambassador-container-pattern
 
 folder: pods
 sidebar: k8s_sidebar

@@ -6,7 +6,6 @@ summary: "When and how to use Docker Multi-Stage builds"
 tags: [Docker, Container Builds]
 keywords: Docker, Container Builds
 references: https://docs.docker.com/develop/develop-images/multistage-build/
-permalink: /docker-multi-stage-build
 
 folder: docker
 sidebar: docker_sidebar

@@ -6,7 +6,6 @@ summary: "How to get information about processes from /proc"
 tags: [Linux Administration, Linux Processes]
 keywords: Linux Administration, Linux Processes
 references: https://man7.org/linux/man-pages/man5/proc.5.html, https://en.wikipedia.org/wiki/Procfs
-permalink: /linux-admin-get-process-info-from-proc
 
 folder: docker
 sidebar: linux_admin_sidebar

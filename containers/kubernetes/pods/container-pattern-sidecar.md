@@ -6,7 +6,6 @@ summary: "When you would use the Sidecar Container Pattern on a Pod, with exampl
 tags: [Kubernetes, Pods]
 keywords: Kubernetes, Pods
 references: https://docs.nginx.com/nginx/admin-guide/monitoring/logging/
-permalink: /k8s-sidecar-container-pattern
 
 folder: pods
 sidebar: k8s_sidebar

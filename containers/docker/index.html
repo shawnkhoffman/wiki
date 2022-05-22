@@ -3,7 +3,6 @@ title: Docker Wiki
 summary: "This is my wiki on Docker"
 tags: [Docker, Containers]
 keywords: Docker, Containers
-permalink: /wiki-docker
 toc: false
 
 sidebar: docker_sidebar
@@ -15,8 +14,8 @@ folder: docker
 {% endif %}
 
 {% unless site.output == "pdf" %}
-<script src="js/jquery.shuffle.min.js"></script>
-<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+<script src="/js/jquery.shuffle.min.js"></script>
+<script src="/js/jquery.ba-throttle-debounce.min.js"></script>
 {% endunless %}
 
       <div class="filter-options">
@@ -40,7 +39,7 @@ folder: docker
                       {% for tag in page.tags %}
                         {% if tag == "Container Builds" and counter < '3' %}
                           {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                          <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                          <li><a href="{{page.url}}">{{page.title}}</a></li>
                         {% endif %}
                       {% endfor %}
                     {% endfor %}
@@ -63,7 +62,7 @@ folder: docker
              {% for tag in page.tags %}
                {% if tag == "Container Security" and counter < '3' %}
                  {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
-                 <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                 <li><a href="{{page.url}}">{{page.title}}</a></li>
                {% endif %}
              {% endfor %}
            {% endfor %}

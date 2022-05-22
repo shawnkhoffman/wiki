@@ -6,7 +6,6 @@ summary: "When you would use the Adapter Container Pattern on a Pod, with exampl
 tags: [Kubernetes, Pods, Kubernetes Patterns]
 keywords: Kubernetes, Pod
 references: https://hub.docker.com/r/nginx/nginx-prometheus-exporter
-permalink: /k8s-adapter-container-pattern
 
 folder: pods
 sidebar: k8s_sidebar

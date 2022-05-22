@@ -6,7 +6,6 @@ summary: "How to generate YAML for objects on Kubernetes"
 tags: [Kubernetes, kubectl]
 keywords: Kubernetes, kubectl
 references: https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#run, https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#create, https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#apply, https://kubernetes.io/docs/reference/generated/kubectl/kubectl-commands#replace
-permalink: /kubectl-generate-yaml
 
 folder: kubectl
 sidebar: k8s_sidebar

@@ -6,7 +6,6 @@ summary: "You don't remember the name of a Bash command you need, so you use man
 tags: [Bash Commands]
 keywords: Bash Commands
 references: https://www.mankier.com/1/apropos.mandoc, https://www.mankier.com/8/mandb
-permalink: /bash-man-k-or-apropos-returns-nothing-appropriate
 
 sidebar: nix_bash_sidebar
 folder: docker

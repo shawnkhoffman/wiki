@@ -9,7 +9,6 @@ Your current user or role does not have access to Kubernetes objects on this EKS
 tags: [Kubernetes, EKS]
 keywords: Kubernetes, EKS
 references: https://aws.amazon.com/premiumsupport/knowledge-center/eks-kubernetes-object-access-error/
-permalink: /eks-current-user-or-role-does-not-have-access-to-k8s-objects
 
 sidebar: eks_sidebar
 folder: eks

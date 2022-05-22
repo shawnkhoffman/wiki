@@ -6,7 +6,6 @@ summary: "Recommendations to improve the security of your Docker images from the
 tags: [Docker, Container Security]
 keywords: Docker, Container Security
 references: https://hub.docker.com/_/alpine, https://github.com/GoogleContainerTools/distroless, https://github.com/mozilla/sops, https://man7.org/linux/man-pages/man7/capabilities.7.html
-permalink: /dockerfile-best-practices-for-security
 
 sidebar: docker_sidebar
 folder: docker

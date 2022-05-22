@@ -3,7 +3,6 @@ title: FIPS Wiki
 summary: "This is my wiki on FIPS"
 tags: [Security, FIPS]
 keywords: Security, FIPS
-permalink: /wiki-fips
 toc: true
 
 sidebar: security_sidebar

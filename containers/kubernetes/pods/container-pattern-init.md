@@ -6,7 +6,6 @@ summary: "When you would use the Init Container Pattern on a Pod, with examples"
 tags: [Kubernetes, Pods]
 keywords: Kubernetes, Pods
 references: https://kubernetes.io/docs/concepts/workloads/pods/init-containers/, https://hub.docker.com/r/mwendler/wget
-permalink: /k8s-init-container-pattern
 
 folder: pods
 sidebar: k8s_sidebar
