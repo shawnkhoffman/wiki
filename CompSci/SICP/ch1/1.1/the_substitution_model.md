@@ -7,7 +7,9 @@ tags: [SICP, Computer Science, SICP Chapter 1]
 keywords: SICP, Computer Science, SICP Chapter 1
 references: https://web.mit.edu/6.001/6.037/sicp.pdf
 
+search: exclude
+
 sidebar: compsci_sicp_ch1_sidebar
-folder: wiki/compsci/ch1/1.1
+folder: wiki/compsci/ch1/1.1/
 ---
 
