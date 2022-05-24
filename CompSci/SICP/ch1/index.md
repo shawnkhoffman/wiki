@@ -7,8 +7,8 @@ tags: [SICP, Computer Science, SICP Chapter 1]
 keywords: SICP, Computer Science, SICP Chapter 1
 references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://en.wikipedia.org/wiki/An_Essay_Concerning_Human_Understanding
 
-sidebar: compsci_sicp_sidebar
-folder: wiki/CompSci/ch1/elements-of-programming
+sidebar: compsci_sicp_ch1_sidebar
+folder: wiki/CompSci/ch1/1.1
 ---
 
 ## Simple ideas vs. Complex ideas
