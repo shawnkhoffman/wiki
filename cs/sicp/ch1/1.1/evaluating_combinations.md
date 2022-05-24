@@ -11,7 +11,7 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1
 ---
 
-We know that a **[combination](/wiki/cs/sicp/ch1/1.1/expressions_and_combinations/)** is an expression that is formed by forming a list of expressions and includes both operators and operands. Furthermore, it is important to note that operators are subexpressions and so are operands, because they each represent a procedure of their own.
+We know that a **[combination](/wiki/cs/sicp/ch1/1.1/expressions_and_combinations/)** is an expression that is formed by forming a list of expressions and includes both operators and operands.
 
 Now we need to know that a **compound expression** is simply a type of combination that we define.
 
@@ -29,11 +29,11 @@ Here's an example:
 21
 {% endhighlight %}
 
-We know that the operator in this example (`*`) represents a procedure that multiplies, and that `3` represents a procedure that evaluates to the number 3 and `7` represents a procedure that evaluates to the number 7. Therefore, going back to the two steps of evaluating a combination, we know that the given operator in this example will apply multiplication the other two subexpressions provided and that this will evaluate to the number `21`.
+We know that the operator in this example (`*`) represents a procedure that multiplies, and that `3` represents that value equal to the number 3 and `7` represents a value equal to the number 7. Therefore, going back to the two steps of evaluating a combination, we know that the given operator in this example represents a procedure will apply multiplication the two values provided and that this will evaluate to the number `21`.
 
 ## Recursion
 
-Note that the first step of evaluating a combination means that in order to accomplish the evaluation process for any given combination we must first perform the evaluation process on *each* element of the combination. Thus, the evaluation rule is **recursive**, meaning it solves the entire problem by reducing it into smaller problems of the same kind. If something is defined recursively, then it is defined in terms of itself. **Recursion** as an evaluation process is a very powerful technique for dealing with hierarchical, tree-like objects.
+Note that the first step of evaluating a combination means that in order to accomplish the evaluation process for any given combination we must first perform the evaluation process on *each* expression in the combination. Thus, the evaluation rule is **recursive**, meaning it solves the entire problem by reducing it into smaller problems of the same kind. If something is defined recursively, then it is defined in terms of itself. **Recursion** as an evaluation process is a very powerful technique for dealing with hierarchical, tree-like objects.
 
 Here's an example of a recursive compound procedure:
 

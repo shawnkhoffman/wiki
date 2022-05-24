@@ -63,4 +63,33 @@ Now we can invoke the function by name:
 
 {% highlight python linenos %}
 square(21)
+441
+{% endhighlight %}
+
+## Extending Compound Procedures
+
+Back to Scheme, we can also use `square` as a building block in defining other procedures. For example, `x2 + y2` can be expressed as:
+
+{% highlight scheme linenos %}
+(+ (square x) (square y))
+{% endhighlight %}
+
+Therefore, we can easily define a procedure that, where any two numbers are provided as arguments, produces the sum of their squares: 
+
+{% highlight scheme linenos %}
+(define (sum-of-squares x y)
+  (+ (square x) (square y)))
+
+(sum-of-squares 3 4)
+25
+{% endhighlight %}
+
+Now we can take this a step further and use `sum-of-squares` as a building block in constructing more compound procedures:
+
+{% highlight scheme linenos %}
+(define (f a)
+  (sum-of-squares (+ a 1) (* a 2)))
+
+(f 5)
+136
 {% endhighlight %}
