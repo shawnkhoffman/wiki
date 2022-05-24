@@ -68,7 +68,7 @@ square(21)
 
 ## Extending Compound Procedures
 
-Back to Scheme, we can also use `square` as a building block in defining other procedures. For example, `x2 + y2` can be expressed as:
+Back to Scheme, we can also use `square` as a building block in defining other procedures. For example, `x² + y²` can be expressed as:
 
 {% highlight scheme linenos %}
 (+ (square x) (square y))
