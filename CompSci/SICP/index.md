@@ -9,6 +9,15 @@ folder: /wiki/CompSci/SICP/
 sidebar: compsci_sicp_sidebar
 ---
 
+This is a difficult book to follow, but is arguably one of the best in the study of Computer Science. It is still used by MIT today.
+
+This book is written such that it's assumed you have at least *some* previous exposure to programming. If you do not, it is highly recommended that you take an introductory course to a programming language such as Python.
+
+Furthermore, this book also uses the Scheme dialect of the Lisp programming language, which is available for most common platforms. Scheme is a pedagogical language and contains only the essentials so that you can learn programming in more advanced languages later. It is highly recommended that you follow the original SICP book that uses Scheme rather than other iterations.
+
+---
+
+<html>
 {% if site.output == "pdf" %}
 {{site.data.alerts.note}} The content on this page doesn't display well on PDF.  {{site.data.alerts.end}}
 {% endif %}
@@ -75,5 +84,6 @@ sidebar: compsci_sicp_sidebar
 {% unless site.output == "pdf" %}
 {% include initialize_shuffle.html %}
 {% endunless %}
+</html>
 
 {{site.data.alerts.note}} There is more coming to each subject in this wiki category as more content is added.{{site.data.alerts.end}}

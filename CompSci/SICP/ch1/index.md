@@ -11,14 +11,6 @@ sidebar: compsci_sicp_sidebar
 folder: wiki/CompSci/ch1/elements-of-programming
 ---
 
-## Intro – Concepts for Context
-
-This is a difficult book to follow, but is arguably one of the best in the study of Computer Science. It is still used by MIT today.
-
-This book is written such that it's assumed you have at least *some* previous exposure to programming. If you do not, it is highly recommended that you take an introductory course to a programming language such as Python.
-
-Furthermore, this book also uses the Scheme dialect of the Lisp programming language, which is available for most common platforms. Scheme is a pedagogical language and contains only the essentials so that you can learn programming in more advanced languages later. It is highly recommended that you follow the original SICP book that uses Scheme rather than other iterations.
-
 ## Simple ideas vs. Complex ideas
 
 The concept of *simple ideas vs. complex ideas* in the human mind is important for context. All ideas form through experiences involving sensation and reflection. **Simple ideas** are ideas that enter the mind through the senses – unrefined, pure, and uncomplicated. Furthermore, the mind has the power of using simple ideas to reflect about other ideas which enter its realm, and of linking and uniting several simple ideas to produce one single idea. Therefore, when the mind compares, unites, and extenuates through the process of reflection, those ideas become **complex ideas**.
