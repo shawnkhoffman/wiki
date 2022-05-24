@@ -46,7 +46,7 @@ and
 We have to evaluate both of them. In order to evaluate the first, we need to evaluate `2` and `(* 4 6)`, which makes us have to recur again. You can think of the s-expressions (the expressions in parentheses) as a tree with partial evaluations percolating upwards. In programming, this describes **tree accumulation** which is the process of accumulating data placed in tree nodes according to their tree structure.
 
 <p align="center">
-  <img width="460" height="300" src="pages/unpublished/comp-sci/sicp-ch1/elements-of-programming/images/sicp-recursion-tree.png">
+  <img width="460" height="300" src="../images/sicp-recursion-tree.png">
 </p>
 
 Note also that we are asked to evaluate primitive expressions, and:
