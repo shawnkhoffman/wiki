@@ -13,3 +13,4 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1/
 ---
 
+To evaluate a combination whose operator names a compound procedure, the interpreter follows much the  same process as for combinations whose operators name primitive procedures, which was described in section [1.1.3](/wiki/cs/sicp/ch1/1.1/evaluating_combinations/).
