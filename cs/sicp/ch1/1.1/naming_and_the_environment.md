@@ -8,7 +8,7 @@ keywords: SICP, Computer Science, SICP Chapter 1
 references: https://web.mit.edu/6.001/6.037/sicp.pdf
 
 sidebar: compsci_sicp_ch1_sidebar
-folder: wiki/compsci/ch1/1.1
+folder: wiki/cs/ch1/1.1
 ---
 
 A critical aspect of a programming language is the means it provides for using names to refer to computational objects. We say that the name identifies a **variable** whose **value** is the object. For example:
