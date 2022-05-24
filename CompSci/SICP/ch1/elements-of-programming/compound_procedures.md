@@ -11,9 +11,9 @@ sidebar: compsci_sicp_sidebar
 folder: wiki/CompSci/ch1/elements-of-programming
 ---
 
-Procedures should not be confused with functions. A procedure performs a task, whereas a function produces information. Functions return values and procedures do not.
+A compound procedure is a procedure that a programmer defines.
 
-### Defining procedures
+## Defining procedures
 
 A **procedure definition** is a powerful abstraction technique where a compound operation can be given a name and then referred to as a unit. For example:
 

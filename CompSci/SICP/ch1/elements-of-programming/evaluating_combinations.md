@@ -55,7 +55,7 @@ Note also that we are asked to evaluate primitive expressions, and:
 - the values of built-in operators are the machine instruction sequences that carry out the corresponding operations. For example, the machine knows what to do with `+` and `*`.
 - the values of other names are the objects associated with those names in the environment. For example, if we say `(define size 2)`, `size` will then be equal to the value of the number `2`.
 
-### The role of the Environment & Special Forms
+## The role of the Environment & Special Forms
 
 The role that the environment itself plays in determining the meaning of the symbols in expressions is crucial. In an interactive language such as Lisp, if you provided an expression like `(+ x 1)` without specifying any information about the environment that would provide a meaning for the symbol `x` (or even for the symbol `+`), it would return to you an error:
 
