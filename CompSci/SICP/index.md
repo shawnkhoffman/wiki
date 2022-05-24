@@ -5,7 +5,7 @@ tags: [SICP, Computer Science]
 keywords: SICP, Computer Science
 toc: false
 
-folder: /wiki/CompSci/SICP/
+folder: /wiki/compsci/sicp/
 sidebar: compsci_sicp_sidebar
 ---
 
