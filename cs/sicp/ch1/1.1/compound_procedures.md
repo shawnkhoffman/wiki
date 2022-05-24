@@ -11,11 +11,11 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1
 ---
 
-A **compound procedure** is a procedure that a programmer defines.
+A **compound procedure** is a procedure that you define. This is the opposite of a primitive procedure, which we have already seen in this chapter.
 
 ## Defining procedures
 
-A **procedure definition** is a powerful abstraction technique where a compound operation can be given a name and then referred to as a unit. For example:
+You define a procedure using a **procedure definition**, which is a powerful abstraction technique where a compound operation can be given a name and then referred to as a unit. For example:
 
 {% highlight scheme linenos %}
 (define (square x) (* x x))

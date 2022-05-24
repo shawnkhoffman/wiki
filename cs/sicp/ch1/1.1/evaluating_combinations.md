@@ -11,20 +11,31 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1
 ---
 
-One of our goals in this chapter is to isolate issues about thinking procedurally.
+We know that a **[combination](/wiki/cs/sicp/ch1/1.1/expressions_and_combinations/)** is an expression that is formed by forming a list of expressions and includes both operators and operands. Furthermore, it is important to note that operators are subexpressions and so are operands, because they each represent a procedure of their own.
 
-In evaluating combinations, the interpreter is itself following a procedure.
+Now we need to know that a **compound expression** is simply a type of combination that we define.
 
-To evaluate a combination, do the following:
+One of our goals in this chapter is to isolate issues by thinking procedurally. We want to understand how these procedures work step-by-step.
+
+Therefore, in evaluating combinations, we understand that the interpreter is itself following a procedure, because it is a program itself, but we don't want to let the interpreter do all the thinking for us – we want to understand how to do these evaluations before we give them to the interpreter. So, to evaluate a combination, we do the following:
 
 1. Evaluate the subexpressions of the combination.
-2. Apply the procedure that is the value of the operator subexpressions to the arguments that are the values of the other subexpressions (the operands).
+2. Apply the procedure that is represented by the operator subexpressions to the arguments that represent the procedures of the other subexpressions (the operands).
 
-Note that the first step says that in order to accomplish the evaluation process for a combination we must first perform the evaluation process on each element of the combination. Thus, the evaluation rule is **recursive** (it needs to invoke itself).
+Here's an example:
 
-**Recursion** is an evaluation process that includes, as one of its steps, the need to invoke the rule itself, and is a very powerful technique for dealing with hierarchical, tree-like objects.
+{% highlight scheme linenos %}
+(* 3 7)
+21
+{% endhighlight %}
 
-Have a look at this expression:
+We know that the operator in this example (`*`) represents a procedure that multiplies, and that `3` represents a procedure that evaluates to the number 3 and `7` represents a procedure that evaluates to the number 7. Therefore, going back to the two steps of evaluating a combination, we know that the given operator in this example will apply multiplication the other two subexpressions provided and that this will evaluate to the number `21`.
+
+## Recursion
+
+Note that the first step of evaluating a combination means that in order to accomplish the evaluation process for any given combination we must first perform the evaluation process on *each* element of the combination. Thus, the evaluation rule is **recursive**, meaning it solves the entire problem by reducing it into smaller problems of the same kind. If something is defined recursively, then it is defined in terms of itself. **Recursion** as an evaluation process is a very powerful technique for dealing with hierarchical, tree-like objects.
+
+Here's an example of a recursive compound procedure:
 
 {% highlight scheme linenos %}
 (* (+ 2 (* 4 6))
@@ -43,7 +54,7 @@ and
 (+ 3 5 7)
 {% endhighlight %}
 
-We have to evaluate both of them. In order to evaluate the first, we need to evaluate `2` and `(* 4 6)`, which makes us have to recur again. You can think of the s-expressions (the expressions in parentheses) as a tree with partial evaluations percolating upwards. In programming, this describes **tree accumulation** which is the process of accumulating data placed in tree nodes according to their tree structure.
+We have to evaluate both of them. In order to evaluate the first, we need to evaluate `2` and `(* 4 6)`, which makes us have to recur again. You can think of the **s-expressions** (the expressions in parentheses) as a tree with partial evaluations percolating upwards. In programming, this describes **tree accumulation** which is the process of accumulating data placed in tree nodes according to their tree structure.
 
 <p align="center">
   <img width="460" height="300" src="../images/sicp-recursion-tree.png">
