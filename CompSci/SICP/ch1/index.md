@@ -1,5 +1,5 @@
 ---
-title: "1. Building Abstractions with Procedures"
+title: "SICP – 1. Building Abstractions with Procedures"
 authors: Shawn Hoffman
 editors: 
 summary: "These study notes are from Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science) by Abelson, H. and Sussman, G."
@@ -19,21 +19,8 @@ The concept of *simple ideas vs. complex ideas* in the human mind is important f
 
 We often say that, *"a computer program is a set of written instructions that tell the computer what to do."*
 
-**Computational processes** are complex ideas and processes that perform computations abstractly. When you write a program, you define computational processes by a number of written procedures (more on this below).
+**Computational processes** are complex ideas and processes that perform computations abstractly. As they evolve, processes manipulate other abstract things called data. Processes can also manipulate other processes. The evolution of a process is directed by a pattern of rules called a program. People create **programs** to direct processes.
 
-**Procedures** are the exact steps of a computational process, akin to recipes, and they are designed to perform specific tasks. This should not be confused with algorithms, rather a procedure has all of the characteristics of an algorithm except that it possibly lacks finiteness (it *may* run forever) whereas an algorithm only runs until all steps are completed and a value is returned. Procedures take simple ideas such as primitives, means of combination, and means of abstraction (more on these below) and turn them into complex ideas (computational processes).
-
-A **program** is made up of an evolution of computational processes. The evolution of computational processes may manipulate other processes, data, or both.
+**Procedures** are the exact steps of a computational process, akin to recipes, and they are designed to perform specific tasks. This should not be confused with algorithms, rather a procedure has all of the characteristics of an algorithm except that it possibly lacks finiteness (it *may* run forever) whereas an algorithm only runs until all steps are completed and a value is returned. Procedures take simple ideas such as primitives, means of combination, and means of abstraction (more on these below) and they turn them into complex ideas (computational processes).
 
 Well-designed computational systems are designed in a modular manner, so that the parts can be constructed, replaced, and debugged separately.
-
-Every powerful language has three mechanisms for combining simple ideas to form more complex ideas:
-
-- **Primitive expressions**, which represent the simplest entities the language is concerned with.
-  - i.e., *a string, an integer, a boolean,* etc.
-- **Means of combination**, by which compound elements are built from simpler ones.
-  - i.e., *operators* such as *+, -, /,* etc.
-- **Means of abstraction**, by which compound elements can be named and manipulated as units.
-  - i.e., *variables, functions* and *classes.*
-
-Any powerful programming language should be able to describe primitive data and primitive procedures and should have methods for combining and abstracting procedures and data.
