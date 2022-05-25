@@ -20,7 +20,7 @@ One of our goals in this chapter is to isolate issues by thinking procedurally. 
 Therefore, in evaluating combinations, we understand that the interpreter is itself following a procedure, because it is a program itself, but we don't want to let the interpreter do all the thinking for us – we want to understand how to do these evaluations before we give them to the interpreter. So, to evaluate a combination, we do the following:
 
 1. Evaluate the subexpressions of the combination.
-2. Apply the procedure that is represented by the operator subexpressions to the arguments that represent the procedures of the other subexpressions (the operands).
+2. Apply the procedure that is represented by the operator subexpressions to the arguments that are the values of the other subexpressions (the operands).
 
 Here's an example:
 

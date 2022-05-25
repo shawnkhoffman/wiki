@@ -22,6 +22,6 @@ Every powerful language has three mechanisms for combining simple ideas to form 
 - **Means of abstraction**, by which compound elements can be named and manipulated as units.
   - i.e., *variables, procedures, functions* and *classes.*
 
-In programming, we deal with two kinds of elements: procedures and data. Informally, data is "stuff" that we want to manipulate, and procedures are the step-by-step descriptions of the rules for manipulating the data. Thus, any powerful programming language should be able to describe primitive data and primitive procedures and should have methods for combining and abstracting procedures and data.
+In Scheme programming, we deal with two kinds of elements: procedures and data. Informally, data is "stuff" that we want to manipulate, and procedures are the step-by-step descriptions of the rules for manipulating the data. Thus, any powerful programming language should be able to describe primitive data and primitive procedures and should have methods for combining and abstracting procedures and data.
 
 In this chapter we deal only with simple numerical data so that we can focus on the rules for building procedures. In later chapters we see that these same rules allow us to build procedures to manipulate compound data as well. In this section we look specifically at procedures.

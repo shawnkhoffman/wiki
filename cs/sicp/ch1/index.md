@@ -21,6 +21,6 @@ We often say that, *"a computer program is a set of written instructions that te
 
 **Computational processes** are complex ideas and processes that perform computations abstractly. As they evolve, processes manipulate other abstract things called data. Processes can also manipulate other processes. The evolution of a process is directed by a pattern of rules called a program. People create **programs** to direct processes.
 
-**Procedures** are the exact steps of a computational process, akin to recipes, and they are designed to perform specific tasks. This should not be confused with algorithms, rather a procedure has all of the characteristics of an algorithm except that it possibly lacks finiteness (it *may* run forever) whereas an algorithm only runs until all steps are completed and a value is returned. Procedures take simple ideas such as primitives, means of combination, and means of abstraction (more on these below) and they turn them into complex ideas (computational processes).
+**Procedures** are the exact steps of a computational process, akin to recipes, and they are designed to perform specific tasks. In other languages, we would call these *functions.* Procedures take simple ideas such as primitives, means of combination, and means of abstraction (more on these later) and they turn them into complex ideas (computational processes).
 
 Well-designed computational systems are designed in a modular manner, so that the parts can be constructed, replaced, and debugged separately.

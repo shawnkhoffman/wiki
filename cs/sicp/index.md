@@ -1,21 +1,25 @@
 ---
 title: SICP Wiki
-summary: "These are my study notes on the Structure and Interpretation of Computer Programs (SICP)."
+authors: Shawn Hoffman
+editors: 
+summary: "These study notes are from Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science) by Abelson, H. and Sussman, G."
 tags: [SICP, Computer Science]
 keywords: SICP, Computer Science
-toc: false
+references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://download.racket-lang.org/
 
 folder: /wiki/cs/sicp/
 sidebar: compsci_sicp_sidebar
 ---
 
-This is a difficult book to follow, but is arguably one of the best in the study of Computer Science. It is still used by MIT today.
+This is a difficult book to follow if you have no background in programming, though having such a background is not required. What I provide here are my study notes and interpretations of the subject matter provided in this book. I hope that this helps you to better absorb it.
 
-This book is written such that it's assumed you have at least *some* previous exposure to programming. If you do not, it is highly recommended that you take an introductory course to a programming language such as Python.
+Furthermore, this book uses the Scheme dialect of the Lisp programming language, which is available for most common platforms. To follow along and to do the lessons in the book, I recommend the Racket IDE which includes DrScheme – install it, you can find a link at the bottom of this page.
 
-Furthermore, this book also uses the Scheme dialect of the Lisp programming language, which is available for most common platforms. Scheme is a pedagogical language and contains only the essentials so that you can learn programming in more advanced languages later. It is highly recommended that you follow the original SICP book that uses Scheme rather than other iterations.
+Moreover, Scheme is a pedagogical language and contains only the essentials so that you can learn programming in more advanced languages later. It is highly recommended that you follow the original SICP book that uses Scheme rather than other iterations, even if you never write another line of Scheme again.
 
 ---
+
+## Chapters
 
 <html>
 {% if site.output == "pdf" %}

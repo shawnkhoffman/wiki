@@ -5,15 +5,17 @@ editors:
 summary: "These study notes are from Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science) by Abelson, H. and Sussman, G."
 tags: [SICP, Computer Science SICP Chapter 1]
 keywords: SICP, Computer Science, SICP Chapter 1
-references: https://web.mit.edu/6.001/6.037/sicp.pdf
+references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://youtu.be/NMf9yjuC944
 
 sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1
 ---
 
+As previously mentioned, this book uses the Scheme programming language throughout for pedagogical reasons, and it is highly recommended that you use this language to follow along. I have added a YouTube link to an introductory lesson on Scheme by Dr. Andrew Runka from the School of Computer Science at Carleton University in Canada, which you can find at the bottom of this page.
+
 ## The REPL
 
-Even with complex expressions, the Scheme interpreter always operates in the same basic cycle: It reads an expression from the terminal, evaluates the expression, and prints the result. This mode of operation is often expressed by saying that the interpreter runs in a **read-eval-print loop (REPL)**.
+An **interpreter** is a special kind of program that is designed to evaluate the commands in a program. You will typically only find these interpeters in *interpreted languages,* such as Scheme. Even with complex expressions, the Scheme interpreter always operates in the same basic cycle: It reads an expression from the terminal, evaluates the expression, and then prints the result. This mode of operation is often expressed by saying that the interpreter runs in a **read-eval-print loop (REPL)**.
 
 An **expression** is a written programmatic construct that returns a value. Some of these are primitive expressions.
 
@@ -61,7 +63,7 @@ false
 
 ### Unbound variables
 
-If you try to lookup an unrecognized expression:.
+If you try to lookup an unrecognized expression:
 
 {% highlight scheme linenos %}
 undefined
@@ -75,9 +77,33 @@ Unbound variable: undefined
 
 ## Compound elements
 
-A **combination** is an expression that is formed by forming a list of expressions and includes both operators and operands. The element that represents a symbol representing a mathematical or logical manipulation is called the **operator**, and the other elements, which the operator is *operating* on, are called **operands**. The value of a combination is obtained by applying the procedure specified for the operator to the operands.
+A **combination** is an expression that is formed by forming a list of expressions and includes both operators and operands. Here is the structure of a basic combination:
 
-The convention of placing the operator to the left of the operands is known as **prefix notation**, and it may be somewhat confusing at first because it departs significantly from the customary mathematical convention. 
+{% highlight scheme linenos %}
+(operator operand1 operand2 ...)
+{% endhighlight %}
+
+The symbol representing a mathematical or logical manipulation is called the **operator**. The other elements, which the operator is *operating* on, are called **operands**. Moreover, the value of a combination is obtained by applying the operator to the operands.
+
+It is important to note that the operator itself represents a procedure. In fact, you can simply pass in any built-in operator and it will tell you that it's a procedure:
+
+{% highlight scheme linenos %}
++
+<procedure:+>
+
+-
+<procedure:->
+
+*
+<procedure:->
+
+/
+<procedure:/>
+{% endhighlight %}
+
+Therefore, the value of any combination is the result of applying the given procedure to the arguments. So, if we say `(+ 2 2)`, then the operator `+` would be the procedure, both `2`'s would be the arguments, and so the value would be `4`.
+
+We can see more examples of basic procedures:
 
 {% highlight scheme linenos %}
 (+ 137 349)
@@ -96,7 +122,7 @@ The convention of placing the operator to the left of the operands is known as *
 12.7
 {% endhighlight %}
 
-Prefix notation has several advantages, however. One of them is that it can accommodate functions that may take an arbitrary number of arguments, as in the following examples:
+The convention of placing the operator to the left of the operands is known as **prefix notation**, and it may be somewhat confusing at first because it departs significantly from the customary mathematical convention. Prefix notation has several advantages, however. One of them is that it can accommodate functions that may take an arbitrary number of arguments, as in the following examples:
 
 {% highlight scheme linenos %}
 (* 2 3 4)
