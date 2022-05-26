@@ -78,7 +78,8 @@ Therefore, we can easily define a procedure that, where any two numbers are prov
 
 {% highlight scheme linenos %}
 (define (sum-of-squares x y)
-  (+ (square x) (square y)))
+        (+ (square x)
+           (square y)))
 
 (sum-of-squares 3 4)
 25
@@ -88,7 +89,8 @@ Now we can take this a step further and use `sum-of-squares` as a building block
 
 {% highlight scheme linenos %}
 (define (f a)
-  (sum-of-squares (+ a 1) (* a 2)))
+        (sum-of-squares
+        (+ a 1) (* a 2)))
 
 (f 5)
 136
