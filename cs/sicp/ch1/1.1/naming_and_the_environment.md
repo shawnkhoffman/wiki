@@ -27,7 +27,7 @@ size
 10
 {% endhighlight %}
 
-Variables are a language's simplest means of abstraction as they allow us to use simple names to refer to the results of compound operations.
+Variables are a language's simplest means of abstraction, which is the use of simple names to refer to values and the results of compound operations. This form of abstraction is called **symbolic abstraction**.
 
 In general, computational objects may have very complex structures, and so it would be extremely inconvenient to have to remember and repeat their details each time we want to use them. Furthermore, complex programs are constructed by building, step-by-step, computational objects of increasing complexity, and the REPL makes this step-by-step program construction particularly convenient because name-object associations can be created incrementally in successive interactions. This feature encourages the incremental development and testing of programs and is largely responsible for the fact that a Lisp program usually consists of a large number of relatively simple functions.
 

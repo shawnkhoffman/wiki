@@ -15,7 +15,7 @@ A **compound procedure** is a procedure that you define. This is the opposite of
 
 ## Defining procedures
 
-You define a procedure using a **procedure definition**, which is a powerful abstraction technique where a compound operation can be given a name and then referred to as a unit. For example:
+You define a procedure using a **procedure definition**, which is a powerful abstraction technique where a compound operation can be given a name and then referred to as a unit. We call this a **procedural abstraction**. For example:
 
 {% highlight scheme linenos %}
 (define (square x) (* x x))
@@ -93,3 +93,5 @@ Now we can take this a step further and use `sum-of-squares` as a building block
 (f 5)
 136
 {% endhighlight %}
+
+This is useful when we start getting into incremental development.
