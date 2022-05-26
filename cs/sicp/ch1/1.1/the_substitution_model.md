@@ -13,11 +13,13 @@ folder: wiki/cs/ch1/1.1/
 sidebar: compsci_sicp_ch1_sidebar
 ---
 
+As a part of this section, I have included another video lecture by Dr. Andrew Runka, which goes over the Substitution Model and Special Forms, and I highly encourage you to watch it.
+
 The mechanism for applying primitive procedures to arguments is built into the interpreter. Any procedure beyond that is not primitive because you define it.
 
 However, to evaluate a combination whose operator names a compound procedure, the interpreter follows mostly the same process as for combinations whose operators name primitive procedures, which was described in section [1.1.3](/wiki/cs/sicp/ch1/1.1/evaluating_combinations/). That is, the interpreter recursively evaluates every part of the expression: it evaluates the procedure (which is the value of the given operator in the combination), it then evaluates each operand, and it then evaluates the application of the procedure to the arguments (which are the values of the given operands in the combination).
 
-The **substitution model** is the method Scheme uses to apply compound procedures to their arguments. When a compound procedure is invoked, Scheme goes through the body of that procedure and replaces every copy of a formal parameter with the corresponding actual argument value(s) provided when the procedure is invoked. Then Scheme evaluates the resulting expression.
+The **substitution model** is the method Scheme uses to apply compound procedures to their arguments. When a compound procedure is invoked, the Scheme interpreter goes through the body of that procedure and replaces every copy of a formal parameter with the corresponding actual argument value(s) provided when the procedure is invoked. Then Scheme evaluates the resulting expression.
 
 Let's use the last example compound procedure from section [1.1.4](/wiki/cs/sicp/ch1/1.1/compound_procedures/):
 
