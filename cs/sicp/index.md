@@ -5,18 +5,24 @@ editors:
 summary: "These study notes are from Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science) by Abelson, H. and Sussman, G."
 tags: [SICP, Computer Science]
 keywords: SICP, Computer Science
-references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://download.racket-lang.org/
+references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://download.racket-lang.org/, https://archive.org/details/ucberkeley-webcast-PL3E89002AA9B9879E, https://youtube.com/playlist?list=PLu-l3j4eka05K_tXNEVaOGy1Vb-oO0Y2s
 toc: false
 
 folder: /wiki/cs/sicp/
 sidebar: compsci_sicp_sidebar
 ---
 
-This is a difficult book to follow if you have no background in programming, though having such a background is not required. What I provide here are my study notes and interpretations of the subject matter provided in this book. I hope that this helps you to better absorb it.
+## Intro
+
+This can be a difficult book to follow if you have no background in programming, though having such a background is not required. What I provide here are my study notes and interpretations of the subject matter provided in this book. I hope that this helps you to better absorb it.
 
 Furthermore, this book uses the Scheme dialect of the Lisp programming language, which is available for most common platforms. To follow along and to do the lessons in the book, I recommend the Racket IDE which includes DrScheme – to install it, you can find a link at the bottom of this page.
 
 Moreover, Scheme is a pedagogical language and contains only the essentials so that you can learn programming in more advanced languages later. It is highly recommended that you follow the original SICP book that uses Scheme rather than other iterations, even if you never write another line of Scheme again.
+
+## Lectures
+
+I provide links to two different sets of lectures here. The first one is the one most recommended for this book: the CS 61A course offered by Dr. Brian Harvey at the University of California, Berkeley in California during Spring Semester of 2011. The second one is to the COMP 3007 course offered by Dr. Andrew Runka at Carleton University in Canada during Fall Semester of 2020. I encourage you to watch both.
 
 ---
 
