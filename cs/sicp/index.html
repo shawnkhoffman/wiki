@@ -1,0 +1,79 @@
+---
+title: SICP Wiki
+summary: "These are my study notes on the Structure and Interpretation of Computer Programs (SICP)."
+tags: [SICP, Computer Science]
+keywords: SICP, Computer Science
+toc: false
+
+folder: /wiki/CompSci/SICP/
+sidebar: compsci_sicp_sidebar
+---
+
+{% if site.output == "pdf" %}
+{{site.data.alerts.note}} The content on this page doesn't display well on PDF.  {{site.data.alerts.end}}
+{% endif %}
+
+{% unless site.output == "pdf" %}
+<script src="/js/jquery.shuffle.min.js"></script>
+<script src="/js/jquery.ba-throttle-debounce.min.js"></script>
+{% endunless %}
+
+      <div class="filter-options">
+      <button class="btn btn-primary" data-group="all">All</button>
+      <button class="btn btn-primary" data-group="chapter-1">Chapter 1</button>
+      <!-- <button class="btn btn-primary" data-group="chapter-2">Chapter 2</button> -->
+    </div>      
+
+<div id="grid" class="row">
+
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["chapter-1"]'>
+
+               <div class="panel panel-default">
+               <div class="panel-heading">Chapter 1</div>
+               <div class="panel-body">
+                 Building Abstractions with Procedures
+                <ul>
+                  <li><a href="ch1/elements-of-programming/">See more</a></li>
+                </ul>
+               </div>
+            </div>
+    
+    </div>
+   
+
+    <!-- <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["chapter-2"]'>
+
+        <div class="panel panel-default">
+            <div class="panel-heading">Chapter 2</div>
+            <div class="panel-body">
+              The smallest deployable units of computing that you can create and manage in Kubernetes.
+                <ul>
+                    {% assign counter = '0' %}
+                    {% for page in site.pages %}
+                      {% for tag in page.tags %}
+                        {% if tag == "Pods" and counter < '3' %}
+                          {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                          <li><a href="{{page.url}}">{{page.title}}</a></li>
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                </ul>
+                <ul>
+                  <li><a href="/content-pods">See more</a></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div> -->
+          <!-- sizer -->
+      <div class="col-xs-6 col-sm-4 col-md-1 shuffle_sizer"></div>          
+
+
+    </div><!-- /#grid -->
+
+{% unless site.output == "pdf" %}
+{% include initialize_shuffle.html %}
+{% endunless %}
+
+{{site.data.alerts.note}} There is more coming to each subject in this wiki category as more content is added.{{site.data.alerts.end}}

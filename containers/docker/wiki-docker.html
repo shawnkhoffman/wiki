@@ -1,0 +1,85 @@
+---
+title: Docker Wiki
+summary: "This is my wiki on Docker"
+tags: [Docker, Containers]
+keywords: Docker, Containers
+permalink: /wiki-docker
+toc: false
+
+sidebar: docker_sidebar
+folder: docker
+---
+
+{% if site.output == "pdf" %}
+{{site.data.alerts.note}} The content on this page doesn't display well on PDF.  {{site.data.alerts.end}}
+{% endif %}
+
+{% unless site.output == "pdf" %}
+<script src="js/jquery.shuffle.min.js"></script>
+<script src="js/jquery.ba-throttle-debounce.min.js"></script>
+{% endunless %}
+
+      <div class="filter-options">
+      <button class="btn btn-primary" data-group="all">All</button>
+      <button class="btn btn-primary" data-group="Builds">Builds</button>
+      <button class="btn btn-primary" data-group="Container Security">Security</button>
+    </div>      
+
+<div id="grid" class="row">
+
+
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Builds"]'>
+
+               <div class="panel panel-default">
+               <div class="panel-heading">Builds</div>
+               <div class="panel-body">
+                 Methods for building super lightweight container images that are ideal for shipping and scaling.
+                  <ul>
+                    {% assign counter = '0' %}
+                    {% for page in site.pages %}
+                      {% for tag in page.tags %}
+                        {% if tag == "Container Builds" and counter < '3' %}
+                          {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                          <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+                        {% endif %}
+                      {% endfor %}
+                    {% endfor %}
+                </ul>
+                <ul>
+                  <li><a href="/content-container builds">See more</a></li>
+                </ul>
+               </div>
+            </div>
+    </div>
+    <div class="col-xs-6 col-sm-4 col-md-4" data-groups='["Container Security"]'>
+
+      <div class="panel panel-default">
+      <div class="panel-heading">Security</div>
+      <div class="panel-body">
+        Practices for securing images, containers, hosts, and registries.
+         <ul>
+           {% assign counter = '0' %}
+           {% for page in site.pages %}
+             {% for tag in page.tags %}
+               {% if tag == "Container Security" and counter < '3' %}
+                 {% capture counter %}{{ counter | plus:'1' }}{% endcapture %}
+                 <li><a href="{{page.url | remove: '/'}}">{{page.title}}</a></li>
+               {% endif %}
+             {% endfor %}
+           {% endfor %}
+       </ul>
+       <ul>
+         <li><a href="/content-container security">See more</a></li>
+       </ul>
+      </div>
+   </div>
+
+
+</div>
+    </div><!-- /#grid -->
+
+{% unless site.output == "pdf" %}
+{% include initialize_shuffle.html %}
+{% endunless %}
+
+{{site.data.alerts.note}} There is more coming to each subject in this wiki category as more content is added.{{site.data.alerts.end}}
