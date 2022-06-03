@@ -82,3 +82,7 @@ followed by the following reductions:
 {% endhighlight %}
 
 This gives the same answer as our previous evaluation model, but the process is different. In particular, the evaluations of `(+ 5 1)` and `(* 5 2)` are each performed twice here, corresponding to the reduction of the expression `(* x x)` with `x` replaced respectively by `(+ 5 1)` and `(* 5 2)`.
+
+These evaluation models are algorithms, and there are many more than these two in existence.
+
+{{site.data.alerts.note}} Scheme uses the applicative-order evaluation model.{{site.data.alerts.end}}
