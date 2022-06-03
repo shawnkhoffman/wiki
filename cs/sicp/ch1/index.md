@@ -11,8 +11,6 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1
 ---
 
-## Lecture
-
 ## Simple ideas vs. Complex ideas
 
 The concept of *simple ideas vs. complex ideas* in the human mind is important for context. All ideas form through experiences involving sensation and reflection. **Simple ideas** are ideas that enter the mind through the senses – unrefined, pure, and uncomplicated. Furthermore, the mind has the power of using simple ideas to reflect about other ideas which enter its realm, and of linking and uniting several simple ideas to produce one single idea. Therefore, when the mind compares, unites, and extenuates through the process of reflection, those ideas become **complex ideas**.
