@@ -15,13 +15,13 @@ folder: wiki/cs/ch1/1.1/
 
 The procedures we have defined thus far have no built-in way to test values and perform different operations depending on the result of said test.
 
-For instance, we cannot define a procedure that computes the absolute value of a number by testing whether the number is positive, negative, or zero and taking different actions in the different cases according to the rule:
+For instance, we cannot define a procedure that computes the absolute value of a number by testing whether the number is positive, negative, or zero and take different actions in the different cases according to the rule:
 
 {% highlight pseudocode %}
 |r| =
 
-r if r > 0
-0 if r = 0
+r  if r > 0
+0  if r = 0
 -r if r < 0
 {% endhighlight %}
 
