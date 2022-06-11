@@ -47,7 +47,7 @@ Using the absolute value example, we can write a procedure using `cond`:
 
 Correlating the aforementioned structure of using `cond`, you can see that `<p1>` (predicate #1) is equal to `(> x 0)`, and `<e1>` (expression #1) is equal to `x`, which is the same value of `x` that is originally passed into the formal parameter defined in the `abs` procedure.
 
-Another way to write the absolute-value procedure is:
+Another way to write the absolute value procedure is:
 
 {% highlight scheme linenos %}
 (define (abs x)
@@ -55,9 +55,9 @@ Another way to write the absolute-value procedure is:
           (else x)))
 {% endhighlight %}
 
-This could be expressed in English as *"If `x` is less than zero return `-x`; otherwise return `x`."* The special symbol `else` can be used in place of the `<p>` in the final clause of a `cond`. This causes the `cond` expression to return the value of the corresponding `<e>` whenever all previous clauses have been bypassed. In fact, any expression that always evaluates to true could be used as the `<p>` here.
+This could be expressed in English as *"If `x` is less than zero return `-x`; otherwise return `x`."* The special symbol `else` can be used in place of the `<p>` in the final clause of a `cond`; this causes the `cond` expression to return the value of the corresponding `<e>` whenever all previous clauses have been bypassed. In fact, any expression that always evaluates to true could be used as the `<p>` here.
 
-Here is yet another way to write the absolute-value procedure:
+Here is yet another way to write the absolute value procedure:
 
 {% highlight scheme linenos %}
 (define (abs x)
