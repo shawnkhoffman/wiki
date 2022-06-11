@@ -71,3 +71,13 @@ This uses the special form `if`, which is a restricted type of conditional that 
 {% highlight scheme linenos %}
 (if <predicate> <consequent> <alternative>)
 {% endhighlight %}
+
+To evaluate an `if` expression, the interpreter starts by evaluating the `<predicate>` part of the expression. If the `<predicate>` evaluates to true, the interpreter then evaluates the `<consequent>` and returns its value. Otherwise, it evaluates the `<alternative>` and returns its value.
+
+In addition to primitive predicates that use comparison operators, such as `<`, `=`, and `>`, there are logical composition operations that enable us to construct compound predicates. The three most frequently used are `and`, `or`, and `not`:
+
+- `(and <e1> <e2> ... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to false, the value of the `and` expression is false, and the rest of the `<e>`'s are not evaluated. If all `<e>`'s evaluate to true values, the value of the `and` expression is the value of the last one.
+
+- `(or <e1> <e2>... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to a true value, that value is returned as the value of the `or` expression, and the rest of  the `<e>`'s are not evaluated. If all `<e>`'s evaluate to false, the value of the `or` expression is false.
+
+- `(not <e>)` <br>The value of a `not` expression is true when the expression `<e>` evaluates to false, and false otherwise.
