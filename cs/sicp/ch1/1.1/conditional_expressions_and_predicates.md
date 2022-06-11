@@ -13,9 +13,7 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1/
 ---
 
-The procedures we have defined thus far have no built-in way to test values and perform different operations depending on the result of said test.
-
-For instance, we cannot define a procedure that computes the absolute value of a number by testing whether the number is positive, negative, or zero and then take different actions in the different cases according to the rule of absolute value:
+The procedures we have defined thus far have no built-in way to test values and perform different operations depending on the result of said test. For instance, we cannot define a procedure that computes the absolute value of a number by testing whether the number is positive, negative, or zero and then take different actions in the different cases according to the rule of absolute value:
 
 {% highlight pseudocode %}
 |r| =
@@ -43,10 +41,35 @@ The general form of a conditional expression is:
       (<pn> <en>))
 {% endhighlight %}
 
-The above structure consists of the symbolic expression `cond` followed by parenthesized pairs of expressions (`<p>` and `<e>`) called *clauses.* The first expression in each pair (`<p>`) is a *predicate* – that is, an expression whose value is interpreted as either true or false. The corresponding expression (`<e>`) is the resulting expression if the result of the preceding predicate is true.
+The above procedure consists of the symbol `cond` followed by parenthesized pairs of expressions (`<p>` and `<e>`) called *clauses.* The first expression in each pair (`<p>`) is a *predicate* – that is, an expression whose value is interpreted as either true or false. The corresponding expression (`<e>`) is the resulting expression if the result of the preceding predicate is true.
 
 In the previous example, `<p1>` (predicate #1) is equal to `(> x 0)`, and `<e1>` (expression #1) is equal to `x`, which is the same value of `x` that is originally passed into the formal parameter defined in the `abs` procedure.
 
 The workflow of this algorithm follows:
 
 The predicate `<p1>` is evaluated first. If its value is false, then `<p2>` is evaluated. If `<p2>`'s value is also false, then `<p3>` is evaluated. This process continues until a predicate is found whose value is true, in which case the interpreter returns the value of the corresponding expression (`<e>`) of the clause as the value of the conditional expression. If none of the `<p>`'s is found to be true, the value of the `cond` is undefined.
+
+Another way to write the absolute-value procedure is:
+
+{% highlight scheme linenos %}
+(define (abs x)
+    (cond ((< x 0) (- x))
+          (else x)))
+{% endhighlight %}
+
+This could be expressed in English as *"If `x` is less than zero return `-x`; otherwise return `x`."* The special symbol `else` can be used in place of the `<p>` in the final clause of a `cond`. This causes the `cond` to return the value of the corresponding `<e>` whenever all previous clauses have been bypassed. In fact, any expression that always evaluates to true could be used as the `<p>` here.
+
+Here is yet another way to write the absolute-value procedure:
+
+{% highlight scheme linenos %}
+(define (abs x)
+    (if (< x 0)
+        (- x)
+        x))
+{% endhighlight %}
+
+This uses the special form `if`, which is a restricted type of conditional that can be used when there are precisely two cases in the case analysis. The general form of an `if` expression is:
+
+{% highlight scheme linenos %}
+(if <predicate> <consequent> <alternative>)
+{% endhighlight %}
