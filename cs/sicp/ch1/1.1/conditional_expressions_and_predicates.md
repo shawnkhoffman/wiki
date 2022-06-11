@@ -74,10 +74,32 @@ This uses the special form `if`, which is a restricted type of conditional that 
 
 To evaluate an `if` expression, the interpreter starts by evaluating the `<predicate>` part of the expression. If the `<predicate>` evaluates to true, the interpreter then evaluates the `<consequent>` and returns its value. Otherwise, it evaluates the `<alternative>` and returns its value.
 
-In addition to primitive predicates that use comparison operators, such as `<`, `=`, and `>`, there are logical composition operations that enable us to construct compound predicates. The three most frequently used are `and`, `or`, and `not`:
+In addition to primitive predicates that use comparison operators, such as `<`, `=`, and `>`, there are logical composition operations that enable us to construct compound predicates; the three most frequently used are `and`, `or`, and `not`:
 
 - `(and <e1> <e2> ... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to false, the value of the `and` expression is false, and the rest of the `<e>`'s are not evaluated. If all `<e>`'s evaluate to true values, the value of the `and` expression is the value of the last one.
 
 - `(or <e1> <e2>... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to a true value, that value is returned as the value of the `or` expression, and the rest of  the `<e>`'s are not evaluated. If all `<e>`'s evaluate to false, the value of the `or` expression is false.
 
 - `(not <e>)` <br>The value of a `not` expression is true when the expression `<e>` evaluates to false, and false otherwise.
+
+Notice that `and` and `or` are special forms, not procedures, because not all of the subexpressions are evaluated, but `not` is an ordinary procedure.
+
+As an example of how these are used, the condition that a number `x` be in the range `5 < x < 10` may be  expressed as:
+
+{% highlight scheme linenos %}
+(and (> x 5) (< x 10))
+{% endhighlight %}
+
+As another example, we can define a predicate to test whether one number is greater than or equal to another as:
+
+{% highlight scheme linenos %}
+(define (>= x y)
+    (or (> x y) (= x y)))
+{% endhighlight %}
+
+or alternatively as:
+
+{% highlight scheme linenos %}
+(define (>= x y)
+    (not (< x y)))
+{% endhighlight %}
