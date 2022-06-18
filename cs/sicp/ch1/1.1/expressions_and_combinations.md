@@ -83,7 +83,7 @@ A **combination** is an expression that is formed by forming a list of expressio
 (operator operand₁ operand₂ ...)
 {% endhighlight %}
 
-The symbol representing a mathematical or logical manipulation is called the **operator**. The other elements, which the operator is *operating* on, are called **operands**. Moreover, the value of a combination is obtained by applying the operator to the operands.
+The symbolic abstraction representing a mathematical or logical manipulation is called the **operator**. The other elements, which the operator is *operating* on, are called **operands**. Moreover, the value of a combination is obtained by applying the operator to the operands.
 
 It is important to note that the operator itself represents a procedure. In fact, you can simply pass in any built-in operator and it will tell you that it's a procedure:
 
@@ -129,37 +129,6 @@ The convention of placing the operator to the left of the operands is known as *
 24
 {% endhighlight %}
 
-### Type Checking
-
-This isn't in the book, but it is important to understand for context. **Type checking** is the language's process of ensuring that the correct types of values are being provided as operands for specific operations.
-
-For example, the following procedure would return an error:
-
-{% highlight scheme linenos %}
-(+ size "twelve")
-=> Runtime error
-{% endhighlight %}
-
-Type checking keeps us from trying to perform strange operations such as dividing a string by a number or a boolean.
-
-There are two forms of type checking. **Static type checking** is done at compile time where all variables are known as *static types* because they do not change. Because type checking is done at compile time, the type for each variable must be declared before compile time. For example, in Golang *– a statically typed language –* the formal method of declaring a variable would look like this:
-
-{% highlight go linenos %}
-var i int = 1
-{% endhighlight %}
-
-Static type checking is beneficial in that it keeps your program from crashing from simple type errors, because the compiler will catch the error before it allows the compiling.
-
-In **dynamic type checking** the type of the variable is not constrained and the type checking is performed at runtime. Most interpreted languages are dynamically typed language because it has the benefit of having the interpreter available to validate types at runtime, but the tradeoff is interpreted languages are significantly less performant than compiled languages. Furthermore, in a *dynamically typed language* such as Python the type of a variable can change at any time, and therefore there is less regulation on the structure of variable declaration. For example:
-
-{% highlight python linenos %}
-# Initial variable declaration
-i = 1
-
-# Variable re-declaration on a different line
-i = "one"
-{% endhighlight %}
-
 ### Nesting combinations
 
 Prefix notation also extends in a straightforward way to allow combinations to be nested – that is, to have combinations whose elements are themselves combinations:
@@ -182,4 +151,38 @@ Prefix notation also extends in a straightforward way to allow combinations to b
             6))
 
 57
+{% endhighlight %}
+
+## Type Checking
+
+This isn't in the book, but it is important to understand for context. **Type checking** is the language's process of ensuring that the correct types of values are being provided as operands for specific operations.
+
+For example, the following procedure would return an error:
+
+{% highlight scheme linenos %}
+(+ 6 "six")
+
++: contract violation
+  expected: number?
+  given: "twelve"
+{% endhighlight %}
+
+Type checking keeps us from trying to perform strange operations such as dividing a string by a number or a boolean.
+
+There are two forms of type checking. **Static type checking** is done at compile time where all variables are known as *static types* because they do not change (when something is static, it is immutable). Because type checking is done at compile time, the type for each variable must be declared before compile time. For example, in Golang *– a statically typed language –* the formal method of declaring a variable would look something like this:
+
+{% highlight go linenos %}
+var i int = 1
+{% endhighlight %}
+
+Static type checking is beneficial in that it keeps your program from crashing from simple type errors, because the compiler will catch the error before it allows the code to be compiled.
+
+In **dynamic type checking** the type of the variable is not constrained and the type checking is performed at runtime. Most interpreted languages are dynamically typed language because it has the benefit of having the interpreter available to validate types at runtime, but the tradeoff is interpreted languages are significantly less performant than compiled languages. Furthermore, in a *dynamically typed language* such as Python the type of a variable can change at any time, and therefore there is less regulation on the structure of variable declaration. For example:
+
+{% highlight python linenos %}
+# Initial variable declaration
+i = 1
+
+# Variable re-declaration on a different line
+i = "one"
 {% endhighlight %}

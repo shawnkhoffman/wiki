@@ -29,7 +29,7 @@ The general form of a procedure definition in Scheme is:
 (define (<name> <formal parameters>) <body>)
 {% endhighlight %}
 
-The `<name>` is a symbol to be associated with the procedure definition in the environment, allowing you to invoke the procedure by name. The `<formal  parameters>` are the names used within the body of the procedure to refer to the corresponding *arguments* of the procedure, which allows you to take any arbitrary numeric value and pass it into the procedure for evaluation. The `<body>` is an expression that will yield the value from the procedure application. The `<name>` and the `<formal parameters>` are grouped within a set of parentheses, just as they would be in an actual call to the procedure being defined.
+The `<name>` is a symbolic abstraction to be associated with the procedure definition in the environment, allowing you to invoke the procedure by name. The `<formal  parameters>` are the names used within the body of the procedure to refer to the corresponding *arguments* of the procedure, which allows you to take any arbitrary numeric value and pass it into the procedure for evaluation. The `<body>` is an expression that will yield the value from the procedure application. The `<name>` and the `<formal parameters>` are grouped within a set of parentheses, just as they would be in an actual call to the procedure being defined.
 
 Once we define a procedure, we can of course use it in expressions:
 

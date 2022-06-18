@@ -68,7 +68,7 @@ Note also that we are asked to evaluate primitive expressions, and:
 
 ## The role of the Environment & Special Forms
 
-The role that the environment itself plays in determining the meaning of the symbols in expressions is crucial. In an interactive language such as Lisp, if you provided an expression like `(+ x 1)` without specifying any information about the environment that would provide a meaning for the symbol `x` (or even for the symbol `+`), it would return to you an error:
+The role that the environment itself plays in determining the meaning of the symbols in expressions is crucial. In an interactive language such as Lisp, if you provided an expression like `(+ x 1)` without specifying any information about the environment that would provide a meaning for the symbolic abstraction `x` (or even for the symbolic abstraction `+`), it would return to you an error:
 
 {% highlight scheme linenos %}
 (+ x 1)

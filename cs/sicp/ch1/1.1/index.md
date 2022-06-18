@@ -11,13 +11,11 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1
 ---
 
-## 1.1 The Elements of Programming
-
 Every powerful language has three mechanisms for combining simple ideas to form more complex ideas:
 
 - **Primitive expressions**, which represent the simplest entities the language is concerned with.
   - i.e., *a string (letters or words), an integer, a boolean (true or false),* etc.
-- **Means of combination**, by allow you to create compound expressions from simpler expressions.
+- **Means of combination**, which allow you to create compound expressions from simpler expressions.
   - i.e., using numbers to perform mathematical calculations.
 - **Means of abstraction**, by which compound elements can be named and manipulated as units.
   - i.e., the use of symbols such as the aforementioned operators, and phonetic names to refer to values as well as processes.
