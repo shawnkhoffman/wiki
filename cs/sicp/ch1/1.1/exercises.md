@@ -162,3 +162,5 @@ What behavior will Ben observe with an interpreter that uses applicative-order e
 **Subjects**:
 
 - [Applicative order vs. Normal order evaluation](/wiki/cs/sicp/ch1/1.1/the_substitution_model/#applicative-order-vs-normal-order)
+- [Compound Procedures](/wiki/cs/sicp/ch1/1.1/compound_procedures/)
+- [Conditional Expressions and Predicates](/wiki/cs/sicp/ch1/1.1/conditional_expressions_and_predicates/)
