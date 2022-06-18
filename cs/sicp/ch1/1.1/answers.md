@@ -5,15 +5,13 @@ editors:
 summary: "These study notes are from Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science) by Abelson, H. and Sussman, G."
 tags: [SICP, Computer Science, SICP Chapter 1]
 keywords: SICP, Computer Science, SICP Chapter 1
-references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8, https://youtu.be/NMf9yjuC944
+references: https://web.mit.edu/6.001/6.037/sicp.pdf
 
 sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1
 ---
 
-## Answers
-
-### Exercise 1.1
+## Exercise 1.1
 
 {% highlight scheme linenos %}
 10
@@ -29,13 +27,13 @@ false
 16
 {% endhighlight %}
 
-### Exercise 1.2
+## Exercise 1.2
 
 {% highlight scheme linenos %}
 (/ (+ 5 4 (- 2 (- 3 (+ 6 (/ 4 5))))) (* 3 (- 6 2) (- 2 7)))
 {% endhighlight %}
 
-### Exercise 1.3
+## Exercise 1.3
 
 {% highlight scheme linenos %}
 ; Procedure to evaluate the square of a number
@@ -78,7 +76,7 @@ false
 200
 {% endhighlight %}
 
-### Exercise 1.4
+## Exercise 1.4
 
 The compound procedure `a-plus-abs-b` is declared and takes two arguments: `a` and `b`.
 
@@ -94,7 +92,7 @@ In the body of this compound procedure, a procedure is declared and will be eith
     ((if (> b 0) + -) a b))
 {% endhighlight %}
 
-### Exercise 1.5
+## Exercise 1.5
 
 In **applicative-order evaluation**, when the procedure "test" is invoked, Ben will observe that the interpreter will immediately substitute `x` for `0`; then, when the `if` conditional in the procedure body validates that `x` is equal to `0`, the procedure will returns the value `0`.
 

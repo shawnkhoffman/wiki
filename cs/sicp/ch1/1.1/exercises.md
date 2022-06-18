@@ -5,7 +5,7 @@ editors:
 summary: "These study notes are from Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science) by Abelson, H. and Sussman, G."
 tags: [SICP, Computer Science, SICP Chapter 1]
 keywords: SICP, Computer Science, SICP Chapter 1
-references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8, https://youtu.be/NMf9yjuC944
+references: https://web.mit.edu/6.001/6.037/sicp.pdf
 
 sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1
@@ -37,6 +37,17 @@ Below is a sequence of expressions. What is the result printed by the interprete
          (else -1))
    (+ a 1))
 {% endhighlight %}
+
+<br>
+
+**Subjects**:
+
+- [Expressions and Combinations](/wiki/cs/sicp/ch1/1.1/expressions_and_combinations/)
+- [Evaluating Combinations](/wiki/cs/sicp/ch1/1.1/evaluating_combinations/)
+- [Compound Procedures](/wiki/cs/sicp/ch1/1.1/compound_procedures/)
+- [Conditional Expressions and Predicates](/wiki/cs/sicp/ch1/1.1/conditional_expressions_and_predicates/)
+
+---
 
 ## Exercise 1.2
 
@@ -84,9 +95,28 @@ Translate the following expression into prefix form:
   </mrow>
 </math>
 
+<br>
+
+**Subjects**:
+
+- [Expressions and Combinations](/wiki/cs/sicp/ch1/1.1/expressions_and_combinations/)
+
+---
+
 ## Exercise 1.3
 
 Define a procedure that takes three numbers as arguments and returns the sum of the squares of the two larger numbers.
+
+<br>
+
+**Subjects**:
+
+- [Expressions and Combinations](/wiki/cs/sicp/ch1/1.1/expressions_and_combinations/)
+- [Evaluating Combinations](/wiki/cs/sicp/ch1/1.1/evaluating_combinations/)
+- [Compound Procedures](/wiki/cs/sicp/ch1/1.1/compound_procedures/)
+- [Conditional Expressions and Predicates](/wiki/cs/sicp/ch1/1.1/conditional_expressions_and_predicates/)
+
+---
 
 ## Exercise 1.4
 
@@ -96,6 +126,15 @@ Observe that our model of evaluation allows for combinations whose operators are
 (define (a-plus-abs-b a b)
     ((if (> b 0) + -) a b))
 {% endhighlight %}
+
+<br>
+
+**Subjects**:
+
+- [Compound Procedures](/wiki/cs/sicp/ch1/1.1/compound_procedures/)
+- [Conditional Expressions and Predicates](/wiki/cs/sicp/ch1/1.1/conditional_expressions_and_predicates/)
+
+---
 
 ## Exercise 1.5
 
@@ -117,3 +156,9 @@ Then he evaluates the expression:
 {% endhighlight %}
 
 What behavior will Ben observe with an interpreter that uses applicative-order evaluation? What behavior will he observe with an interpreter that uses normal-order evaluation? Explain your answer. (Assume that the evaluation rule for the special form `if` is the same whether the interpreter is using normal or applicative order: The predicate expression is evaluated first, and the result determines whether to evaluate  the consequent or the alternative expression.)
+
+<br>
+
+**Subjects**:
+
+- [Applicative order vs. Normal order evaluation](/wiki/cs/sicp/ch1/1.1/the_substitution_model/#applicative-order-vs-normal-order)
