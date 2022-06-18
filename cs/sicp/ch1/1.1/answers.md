@@ -94,6 +94,6 @@ In the body of this compound procedure, a procedure is declared and will be eith
 
 ## Exercise 1.5
 
-In **applicative-order evaluation**, when the procedure "test" is invoked, Ben will observe that the interpreter will immediately substitute `x` for `0`; then, when the `if` conditional in the procedure body validates that `x` is equal to `0`, the procedure will returns the value `0`.
+In **applicative-order evaluation**, when the procedure "test" is invoked, Ben will observe that the interpreter will evaluate the arguments and then apply; so, `x` will immediately be evaluated to `0`, but when the interpreter tries to evaluate `y` it will call the procedure `(p)` which will recursively invoke itself with no return value; thus, it will get stuck in an infinite loop.
 
 In **normal-order evaluation**, when the procedure "test" is invoked, Ben will observe that the interpreter will not immediately perform the substitution for the arguments; rather, the interpreter will wait to perform the substitution until the primitive procedure `(= x 0)` is called in the `if` conditional inside the body of the parent procedure. Once the substitution is performed, the primitive procedure is evaluated and the parent procedure returns the value `0`.
