@@ -85,7 +85,7 @@ The compound procedure `a-plus-abs-b` is declared and takes two arguments: `a` a
 ...
 {% endhighlight %}
 
-In the body of this compound procedure, a procedure is declared and will be either an addition or subtraction compound expression contingent upon the result of the conditional special form `if`: if `b` is greater than `0`, the applied procedure will be `+` (addition); otherwise, the applied procedure will be `-` (subtraction). Then, that applied procedure will be applied to `a` and `b`; either `a + b` or `a - b`.
+Because Scheme uses applicative-order evaluation by default, all of the arguments passed into the parameters will be evaluated and substituted in the body immediately. In the body of this compound procedure, a procedure is declared and will be either an addition or subtraction compound expression contingent upon the result of the conditional special form `if`; so, if `b` is greater than `0`, the applied procedure will be `+` (addition); otherwise, the applied procedure will be `-` (subtraction). Then, that applied procedure will be applied to `a` and `b`; either `a + b` or `a - b`.
 
 {% highlight scheme linenos %}
 ...
