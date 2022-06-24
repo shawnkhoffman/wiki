@@ -53,7 +53,7 @@ Below is a sequence of expressions. What is the result printed by the interprete
 
 Translate the following expression into prefix form:
 
-<math xmlns="http://www.w3.org/1998/Math/MathML" display="block">
+<math xmlns="https://www.w3.org/TR/MathML3/" display="block">
   <mrow class="MJX-TeXAtom-ORD">
     <mfrac>
       <mrow>
@@ -92,6 +92,7 @@ Translate the following expression into prefix form:
         <mo stretchy="false">)</mo>
       </mrow>
     </mfrac>
+    <mo>.</mo>
   </mrow>
 </math>
 

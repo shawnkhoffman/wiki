@@ -16,9 +16,11 @@ sidebar: compsci_sicp_sidebar
 
 This can be a difficult book to follow if you have no background in programming, though having such a background is not required. What I provide here are my study notes and interpretations of the subject matter provided in this book. I hope that this helps you to better absorb it.
 
-Furthermore, this book uses the Scheme dialect of the Lisp programming language, which is available for most common platforms. To follow along and to do the lessons in the book, I recommend the Racket IDE which includes DrScheme – to install it, you can find a link at the bottom of this page.
+Furthermore, this book uses the Scheme dialect of the Lisp programming language, which is available for most common platforms. To follow along and to do the lessons in the book, I recommend the Racket IDE which includes DrScheme – to install it, you can follow the link at the bottom of this page.
 
 Moreover, Scheme is a pedagogical language and contains only the essentials so that you can learn programming in more advanced languages later. It is highly recommended that you follow the original SICP book that uses Scheme rather than other iterations, even if you never write another line of Scheme again.
+
+The method SICP uses to teach you programming is akin to learning how to build a physical structure (e.g., an office building); you first will learn the smallest units of any structure (primitives –– think of these as building materials), and then you will build upon that knowledge to construct small structures. Then you will build even larger structures upon that knowledge. I am a major proponent of such a method, as this approach will be the scaffolding you need to eventually become a master at programming.
 
 ## Lectures
 
