@@ -17,7 +17,7 @@ folder: wiki/cs/ch1/1.1/
 
 The subject of mathematical functions correlates to programming. If you are not familiar with mathematical functions, it's a fairly straightforward concept, and I highly recommend you to study this concept until you understand it before proceeding forward into this section. You can use <a target="_blank" href="https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:evaluating-functions/v/what-is-a-function">this Khan Academy video</a> to do so.
 
-{{site.data.alerts.tip}}Khan's Academy is my recommended solution for learning almost all things related to Math.{{site.data.alerts.end}}
+{{site.data.alerts.tip}}<a target="_blank" href="https://www.khanacademy.org/">Khan's Academy</a> is my recommended solution for learning almost all things related to Math. They're a nonprofit organization and their platform is free, but they do rely on donations to keep their website going.{{site.data.alerts.end}}
 
 ## How procedures in programming relate to mathematical functions
 
@@ -28,8 +28,8 @@ Moreover, the difference between a mathematical function and a procedure is a re
 Therefore, what you must do to translate a math function into a programming language is to use the language to procedurally perform the evaluation (imperatively) step-by-step.
 
 {{site.data.alerts.note}}The example the book mentions in this section is <b>Newton's Method of Successive Approximations</b>.<br>
-Furthermore, if you are unfamiliar with <a target="_blank" href="https://youtu.be/WuaI5G04Rcw">Newton's Method</a>, this subject is taught in calculus, but do not be alarmed; you do not have to know this, but you should try your best to follow along just to understand the main point that is being illustrated here, which is taking small and simple compound procedures and recursion (both of which are explained in previous sections) to construct a larger and more complex procedure.<br><br>
-Moreover, even if you have zero experience with calculus or you fear that your math skills are not prepared for this, you <i>can</i> learn this, and I have provided a link to a YouTube video on Newton's Method at the bottom of this page. However, I do encourage you to be familiar with mathematical functions and derivatives before you take a swing at becoming familiar with Newton's Method, and you can use <a target="_blank" href="https://www.khanacademy.org/math/differential-calculus">this Khan's Academy course</a> to do so.{{site.data.alerts.end}}
+Furthermore, if you are unfamiliar with <a target="_blank" href="https://youtu.be/WuaI5G04Rcw">Newton's Method</a>, this subject is taught in Calculus, but do not be alarmed; you do not have to know this, but you should try your best to follow along just to understand the main point that is being illustrated here, which is taking small and simple compound procedures and recursion (both of which are explained in previous sections) to construct a larger and more complex procedure.<br><br>
+Moreover, even if you have zero experience with Calculus or you fear that your math skills are not prepared for this, you <i>can</i> learn this, and I have provided a link to a YouTube video on Newton's Method at the bottom of this page. However, I do encourage you to be familiar with mathematical functions and derivatives before you take a swing at becoming familiar with Newton's Method, and you can use <a target="_blank" href="https://www.khanacademy.org/math/differential-calculus">this Khan's Academy course</a> to do so.{{site.data.alerts.end}}
 
 What the book does to illustrate Newton's Method in Scheme is it creates the following procedures;
 
@@ -44,7 +44,6 @@ The larger complex compound procedure made up of several simple compound procedu
 The simple compound procedures used by the larger complex compound procedure:
 
 {% highlight scheme linenos %}
-
 ; Don't forget these two procedures previously mentioned; these will be used in this program.
 
 (define (square x) (* x x))
@@ -56,7 +55,6 @@ The simple compound procedures used by the larger complex compound procedure:
 {% endhighlight %}
 
 {% highlight scheme linenos %}
-
 ; A procedure to improve the guess.
 ; This procedure also uses a simpler compound procedure that is defined below.
 
@@ -65,7 +63,6 @@ The simple compound procedures used by the larger complex compound procedure:
 {% endhighlight %}
 
 {% highlight scheme linenos %}
-
 ; A procedure to calculate the average of y from x/y.
 ; This evaluation is used to get a better guess.
 
@@ -74,7 +71,6 @@ The simple compound procedures used by the larger complex compound procedure:
 {% endhighlight %}
 
 {% highlight scheme linenos %}
-
 ; A procedure to determine whether the guess is good enough to be an acceptable
 ; match. This procedure gets used as a base case in the recursion of the larger
 ; complex procedure.
@@ -83,11 +79,32 @@ The simple compound procedures used by the larger complex compound procedure:
     (< (abs (- (square guess) x)) 0.001))
 {% endhighlight %}
 
-{% highlight scheme linenos %}
+{{site.data.alerts.tip}}It is a good idea to give predicates names that end with question marks to help us remember that they are predicates. This is just a stylistic convention; as far as the interpreter is concerned, the question mark is just an ordinary character.{{site.data.alerts.end}}<br>
 
+{% highlight scheme linenos %}
 ; A procedure used as the entrypoint into the program. This entrypoint is the
 ; first procedure called to start the program.
+; This procedure calls upon the aforementioned larger complex procedure.
 
 (define (sqrt x)
     (sqrt-iter 1.0 x))
+{% endhighlight %}
+
+You could actually copy each of the procedures above in exact order and begin making use of this program:
+
+{% highlight scheme linenos %}
+(sqrt 100)
+10.000000000139897
+
+(sqrt 9)
+3.00009155413138
+
+(sqrt (+ 100 37))
+11.704699917758145
+
+(sqrt (+ (sqrt 2) (sqrt 3)))
+1.7739279023207892
+
+(square (sqrt 1000))
+1000.000369924366
 {% endhighlight %}
