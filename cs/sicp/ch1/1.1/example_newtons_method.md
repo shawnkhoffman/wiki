@@ -41,7 +41,8 @@ The larger complex compound procedure made up of several simple compound procedu
 The simple compound procedures used by the larger complex compound procedure:
 
 {% highlight scheme linenos %}
-; Don't forget our two previous procedures; these will be used in this program.
+
+; Don't forget these two procedures previously mentioned; these will be used in this program.
 
 (define (square x) (* x x))
 
@@ -52,6 +53,7 @@ The simple compound procedures used by the larger complex compound procedure:
 {% endhighlight %}
 
 {% highlight scheme linenos %}
+
 ; A procedure to improve the guess.
 ; This procedure also uses a simpler compound procedure that is defined below.
 
@@ -60,6 +62,7 @@ The simple compound procedures used by the larger complex compound procedure:
 {% endhighlight %}
 
 {% highlight scheme linenos %}
+
 ; A procedure to calculate the average of y from x/y.
 ; This evaluation is used to get a better guess.
 
@@ -68,6 +71,7 @@ The simple compound procedures used by the larger complex compound procedure:
 {% endhighlight %}
 
 {% highlight scheme linenos %}
+
 ; A procedure to determine whether the guess is good enough to be an acceptable
 ; match. This procedure gets used as a base case in the recursion of the larger
 ; complex procedure.
@@ -77,6 +81,7 @@ The simple compound procedures used by the larger complex compound procedure:
 {% endhighlight %}
 
 {% highlight scheme linenos %}
+
 ; A procedure used as the entrypoint into the program. This entrypoint is the
 ; first procedure called to start the program.
 
