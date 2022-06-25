@@ -108,3 +108,7 @@ You could actually copy each of the procedures above in exact order and begin ma
 (square (sqrt 1000))
 1000.000369924366
 {% endhighlight %}
+
+## Exercises
+
+Complete Exercises [1.6](/wiki/cs/sicp/ch1/1.1/exercises/#exercise-16) through [1.8](/wiki/cs/sicp/ch1/1.1/exercises/#exercise-18) and revisit the related subjects you struggle with.

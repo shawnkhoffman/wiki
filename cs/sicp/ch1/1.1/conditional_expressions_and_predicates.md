@@ -122,4 +122,4 @@ or alternatively as:
 
 ## Exercises
 
-Complete [Exercises 1.1](/wiki/cs/sicp/ch1/1.1/exercises/#exercise-11) through [1.5](/wiki/cs/sicp/ch1/1.1/exercises/#exercise-15) and revisit the related subjects you struggle with.
+Complete Exercises [1.1](/wiki/cs/sicp/ch1/1.1/exercises/#exercise-11) through [1.5](/wiki/cs/sicp/ch1/1.1/exercises/#exercise-15) and revisit the related subjects you struggle with.
