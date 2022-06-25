@@ -13,10 +13,13 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1/
 ---
 
-If you are not familiar with evaluating square roots and mathematical functions, I highly recommend you to study these until you understand them before proceeding forward into this section. Here are two links to videos by Khan Academy on these subjects:
+## Intro
 
-1. [Evaluating square roots](https://youtu.be/E9YEUQR9NAU)
-2. [Mathematical functions](https://youtu.be/ROIfbUQrSY4)
+The subject of mathematical functions correlates to programming. If you are not familiar with mathematical functions, it's a fairly straightforward concept, and I highly recommend you to study this concept until you understand it before proceeding forward into this section. You can use <a target="_blank" href="https://www.khanacademy.org/math/algebra/x2f8bb11595b61c86:functions/x2f8bb11595b61c86:evaluating-functions/v/what-is-a-function">this Khan Academy video</a> to do so.
+
+{{site.data.alerts.tip}}Khan's Academy is my recommended solution for learning almost all things related to Math.{{site.data.alerts.end}}
+
+## How procedures in programming relate to mathematical functions
 
 Procedures are quite akin to ordinary mathematical functions; they specify a value that is determined by one or more parameters. But there is an important distinction between mathematical functions and computational procedures; procedures must be effective and serve some sort of purpose in your program. Also, math functions do not describe a procedure, and so they tell us almost nothing about how to actually find the solution of a given expression. Furthermore, it doesn't help to "pseudo rephrase" a math function in any programming language – that is, use a programming language to try to rephrase the math function.
 
