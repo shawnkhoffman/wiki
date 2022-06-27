@@ -47,9 +47,9 @@ The larger complex compound procedure made up of several simple compound procedu
       (sqrt-iter (improve guess x) x)))
 {% endhighlight %}
 
-{{site.data.alerts.note}}The <i>sqrt-iter</i> procedure takes two arguments: a guess and the radicand. It then evaluates that guess against the base case (the predicate <i>good enough?</i>) is met to evaluate whether the guess is the square root of the radicand. If not, it increases the value of that guess and repeats the evaluation. This process is repeated until the base case is met.<br><br>
+{{site.data.alerts.note}}The <i>sqrt-iter</i> procedure takes two arguments: a guess and the radicand. It then evaluates that guess against the base case (the predicate procedure <i>good enough?</i>) is met to evaluate whether the guess is the square root of the radicand. If not, it increases the value of that guess and repeats the evaluation. This process is repeated until the base case is met.<br><br>
 
-This method of repeating the same process is called <i>iteration,</i> and this is performed through the practice of recursion (the procedure calls itself).{{site.data.alerts.end}}
+This method of repeating the same process is called <b>iteration,</b> and this is performed through the practice of recursion (the procedure calls itself).{{site.data.alerts.end}}
 
 <br>
 
@@ -70,13 +70,12 @@ The simple compound procedures used by the larger complex compound procedure:
 
 {% highlight scheme linenos %}
 ; A procedure to improve the guess.
-; This procedure also relies on a simpler compound procedure that is defined below.
+; This procedure improves the guess by averaging it with the quotient of the radicand and
+; the old guess, and therefore relies on the next compound procedure that is defined below.
 
 (define (improve guess x)
     (average guess (/ x guess)))
 {% endhighlight %}
-
-{{site.data.alerts.note}}The <i>improve</i> procedure improves the guess by averaging it with the quotient of the radicand and the old guess.{{site.data.alerts.end}}
 
 <br>
 
@@ -108,7 +107,7 @@ The simple compound procedures used by the larger complex compound procedure:
     (sqrt-iter 1.0 x))
 {% endhighlight %}
 
-{{site.data.alerts.note}}In this example, the first guess that is passed in is 1.0. This would not make any difference in many Lisp implementations; however, MIT Scheme distinguishes between exact integers and decimal values, and dividing two integers produces a rational number rather than a decimal. For example, dividing 10 by 6 yields 5/3, while dividing 10.0 by 6.0 yields 1.6666666666666667. If we start with an initial guess of 1 in our square-root program, and <i>x</i> is an exact integer, all subsequent values produced in the square-root computation will be rational numbers rather than decimals. Mixed operations on rational numbers and decimals always yield decimals, so starting with an initial guess of 1.0 forces all subsequent values to be decimals.{{site.data.alerts.end}}
+{{site.data.alerts.note}}In this example, the first guess that is passed in is a decimal value rather than an integer. This would not make any difference in many Lisp implementations; however, MIT Scheme distinguishes between exact integers and decimal values, and dividing two integers produces a rational number rather than a decimal. For example, dividing 10 by 6 yields 5/3, while dividing 10.0 by 6.0 yields 1.6666666666666667. If we start with an initial guess of 1 in our square-root program, and <i>x</i> is an exact integer, all subsequent values produced in the square-root computation will be rational numbers rather than decimals. Mixed operations on rational numbers and decimals always yield decimals, so starting with an initial guess of 1.0 forces all subsequent values to be decimals.{{site.data.alerts.end}}
 
 You could actually copy each of the procedures above in exact order and begin making use of this program:
 
