@@ -47,7 +47,7 @@ The larger complex compound procedure made up of several simple compound procedu
       (sqrt-iter (improve guess x) x)))
 {% endhighlight %}
 
-{{site.data.alerts.note}}The <i>sqrt-iter</i> procedure takes two arguments: a guess and the radicand. It then evaluates that guess against the base case (the predicate procedure <i>good enough?</i>) is met to evaluate whether the guess is the square root of the radicand. If not, it increases the value of that guess and repeats the evaluation. This process is repeated until the base case is met.<br><br>
+{{site.data.alerts.note}}The <i>sqrt-iter</i> procedure takes two arguments: a guess and the radicand. It then evaluates that guess against the base case (the predicate defined in the procedure <i>good enough?</i>) is met to evaluate whether the guess is the square root of the radicand. If not, it increases the value of that guess and repeats the evaluation. This process is repeated until the base case is met.<br><br>
 
 This method of repeating the same process is called <b>iteration,</b> and this is performed through the practice of recursion (the procedure calls itself).{{site.data.alerts.end}}
 
@@ -76,8 +76,6 @@ The simple compound procedures used by the larger complex compound procedure:
 (define (improve guess x)
     (average guess (/ x guess)))
 {% endhighlight %}
-
-<br>
 
 {% highlight scheme linenos %}
 ; A procedure to calculate the average of y from x/y.
