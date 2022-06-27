@@ -27,11 +27,17 @@ Moreover, the difference between a mathematical function and a procedure is a re
 
 Therefore, what you must do to translate a math function into a programming language is to use the language to procedurally perform the evaluation (imperatively) step-by-step.
 
-{{site.data.alerts.note}}The example the book mentions in this section is <b>Newton's Method of Successive Approximations</b>.<br>
+<br>
+
+{{site.data.alerts.important}}The example the book mentions in this section is <b>Newton's Method of Successive Approximations</b>.<br>
 Furthermore, if you are unfamiliar with <a target="_blank" href="https://youtu.be/WuaI5G04Rcw">Newton's Method</a>, this subject is taught in Calculus, but do not be alarmed; you do not have to know this, but you should try your best to follow along just to understand the main point that is being illustrated here, which is using procedures similarly to mathematical functions as well as using everything we have learned up to this point, including taking small & simple compound procedures and recursion (both of which are explained in previous sections) to construct a larger and more complex procedure.<br><br>
 Moreover, even if you have zero experience with Calculus or you fear that your math skills are not prepared for this, you <i>can</i> learn this (you can start with <a target="_blank" href="https://youtu.be/WuaI5G04Rcw">this video on YouTube</a>). However, I do encourage you to be familiar with derivatives before you take a swing at becoming familiar with Newton's Method, and you can use <a target="_blank" href="https://www.khanacademy.org/math/differential-calculus">this Khan Academy course</a> to do so.{{site.data.alerts.end}}
 
-What the book does to show you how Newton's Method can be built in Scheme is it creates the following procedures;
+---
+
+## Newton's Method as an example
+
+What the book does to show you how Newton's Method can be defined as a procedure in Scheme is it creates the following procedures;
 
 The larger complex compound procedure made up of several simple compound procedures:
 
@@ -40,6 +46,12 @@ The larger complex compound procedure made up of several simple compound procedu
       guess
       (sqrt-iter (improve guess x) x)))
 {% endhighlight %}
+
+{{site.data.alerts.note}}The <i>sqrt-iter</i> procedure takes two arguments: a guess and the radicand. It then evaluates that guess against the base case (the predicate <i>good enough?</i>) is met to evaluate whether the guess is the square root of the radicand. If not, it increases the value of that guess and repeats the evaluation. This process is repeated until the base case is met.<br><br>
+
+This method of repeating the same process is called <i>iteration,</i> and this is performed through the practice of recursion (the procedure calls itself).{{site.data.alerts.end}}
+
+<br>
 
 The simple compound procedures used by the larger complex compound procedure:
 
@@ -63,6 +75,10 @@ The simple compound procedures used by the larger complex compound procedure:
 (define (improve guess x)
     (average guess (/ x guess)))
 {% endhighlight %}
+
+{{site.data.alerts.note}}The <i>improve</i> procedure improves the guess by averaging it with the quotient of the radicand and the old guess.{{site.data.alerts.end}}
+
+<br>
 
 {% highlight scheme linenos %}
 ; A procedure to calculate the average of y from x/y.
