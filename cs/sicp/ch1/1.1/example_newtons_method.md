@@ -58,10 +58,10 @@ The simple compound procedures used by the larger complex compound procedure:
 {% highlight scheme linenos %}
 ; Don't forget these two procedures previously mentioned; these will be used in this program.
 
-; A procedure to calculate a number (x) squared
+; A procedure to calculate a number (x) squared.
 (define (square x) (* x x))
 
-; A procedure to calculate the absolute value of a number (x)
+; A procedure to calculate the absolute value of a number (x).
 (define (abs x)
     (cond ((> x 0) x)
           ((= x 0) 0)
