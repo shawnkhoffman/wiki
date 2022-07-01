@@ -15,7 +15,7 @@ As previously mentioned, this book uses the Scheme programming language througho
 
 ## The REPL
 
-An **interpreter** is a special kind of program that is designed to evaluate the commands in a program. You will typically only find these interpeters in *interpreted languages,* such as Scheme. Even with complex expressions, the Scheme interpreter always operates in the same basic cycle: It reads an expression from the terminal, evaluates the expression, and then prints the result. This mode of operation is often expressed by saying that the interpreter runs in a **read-eval-print loop (REPL)**.
+An **interpreter** is a special kind of program that is designed to evaluate the commands in a program. You will typically only find these interpeters in *interpreted languages,* such as Scheme. Even with complex expressions, the Scheme interpreter always operates in the same basic cycle: It reads an expression from the terminal, evaluates the expression, and then prints the result. This mode of operation is often expressed by saying that the interpreter runs in a **read-eval-print loop (REPL)**. Furthermore, you can interact with the interpreter's REPL in most interpreted programming languages.
 
 An **expression** is a written programmatic construct that returns a value. Some of these are primitive expressions.
 
