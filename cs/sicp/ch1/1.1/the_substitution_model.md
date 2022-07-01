@@ -57,7 +57,7 @@ However, there are two points that should be stressed:
 
 2. There are many more increasingly elaborate models of how interpreters work. The substitution model is only the first of these models – a way to get started thinking formally about the evaluation process. In general, when modeling phenomena in science and engineering, we begin with simplified, incomplete models. As we examine things in greater detail, these simple models become inadequate and must be replaced by more refined models, and the substitution model is no exception.
 
-## Applicative order vs. Normal order
+## Applicative order vs. Normal order evaluation
 
 According to the description of evaluation so far, the interpreter first evaluates the operator and operands and then applies the resulting procedure to the resulting arguments, just as was described in Section [1.1.3](/wiki/cs/sicp/ch1/1.1/evaluating_combinations/). This method of evaluation is called **applicative-order evaluation**.
 

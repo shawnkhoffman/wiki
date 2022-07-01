@@ -30,7 +30,7 @@ Therefore, what you must do to translate a math function into a programming lang
 <br>
 
 {{site.data.alerts.important}}The example the book mentions in this section is <b>Newton's Method of Successive Approximations</b>.<br>
-Furthermore, if you are unfamiliar with <a target="_blank" href="https://youtu.be/WuaI5G04Rcw">Newton's Method</a>, this subject is taught in Calculus, but do not be alarmed; you do not have to know this, but you should try your best to follow along just to understand the main point that is being illustrated here, which is using procedures similarly to mathematical functions as well as using everything we have learned up to this point, including taking small & simple compound procedures and recursion (both of which are explained in previous sections) to construct a larger and more complex procedure.<br><br>
+If you are unfamiliar with <a target="_blank" href="https://youtu.be/WuaI5G04Rcw">Newton's Method</a>, this subject is taught in Calculus, but do not be alarmed; you do not have to know this, but you should try your best to follow along just to understand the main point that is being illustrated here, which is using procedures similarly to mathematical functions as well as using everything we have learned up to this point, including taking small & simple compound procedures and recursion (both of which are explained in previous sections) to construct a larger and more complex procedure.<br><br>
 Moreover, even if you have zero experience with Calculus or you fear that your math skills are not prepared for this, you <i>can</i> learn this (you can start with <a target="_blank" href="https://youtu.be/WuaI5G04Rcw">this video on YouTube</a>). However, I do encourage you to be familiar with derivatives before you take a swing at becoming familiar with Newton's Method, and you can use <a target="_blank" href="https://www.khanacademy.org/math/differential-calculus">this Khan Academy course</a> to do so.{{site.data.alerts.end}}
 
 ---
@@ -47,9 +47,9 @@ The larger complex compound procedure made up of several simple compound procedu
       (sqrt-iter (improve guess x) x)))
 {% endhighlight %}
 
-{{site.data.alerts.note}}The <i>sqrt-iter</i> procedure takes two arguments: a guess and the radicand. It then evaluates that guess against the base case (the predicate defined in the procedure <i>good enough?</i>) is met to evaluate whether the guess is the square root of the radicand. If not, it increases the value of that guess and repeats the evaluation. This process is repeated until the base case is met.<br><br>
+{{site.data.alerts.note}}The <i>sqrt-iter</i> procedure takes two arguments: a guess and the radicand. It then evaluates that guess against the base case (the predicate defined in the procedure <i>good enough?</i>) to determine whether the guess is the square root of the radicand. If not, it increases the value of that guess and repeats the evaluation. This process is repeated until the base case is met.<br><br>
 
-This method of repeating the same process is called <b>iteration,</b> and this is performed through the practice of recursion (the procedure calls itself).{{site.data.alerts.end}}
+This method of repeating the same process is called <b>iteration</b> and, in this example, this is performed through the practice of recursion (the procedure calls itself).{{site.data.alerts.end}}
 
 <br>
 
@@ -94,7 +94,7 @@ The simple compound procedures used by the larger complex compound procedure:
     (< (abs (- (square guess) x)) 0.001))
 {% endhighlight %}
 
-{{site.data.alerts.tip}}It is a good idea to give predicates names that end with question marks to help us remember that they are predicates. This is just a stylistic convention; as far as the interpreter is concerned, the question mark is just an ordinary character.{{site.data.alerts.end}}<br>
+{{site.data.alerts.tip}}It is a good idea to give predicates names that end with question marks to help us remember that they are predicates. This is just a stylistic convention; however, as far as the interpreter is concerned, the question mark is just an ordinary character.{{site.data.alerts.end}}<br>
 
 {% highlight scheme linenos %}
 ; A procedure used as the entrypoint into the program. This entrypoint is the
@@ -106,6 +106,8 @@ The simple compound procedures used by the larger complex compound procedure:
 {% endhighlight %}
 
 {{site.data.alerts.note}}In this example, the first guess that is passed in is a decimal value rather than an integer. This would not make any difference in many Lisp implementations; however, MIT Scheme distinguishes between exact integers and decimal values, and dividing two integers produces a rational number rather than a decimal. For example, dividing 10 by 6 yields 5/3, while dividing 10.0 by 6.0 yields 1.6666666666666667. If we start with an initial guess of 1 in our square-root program, and <i>x</i> is an exact integer, all subsequent values produced in the square-root computation will be rational numbers rather than decimals. Mixed operations on rational numbers and decimals always yield decimals, so starting with an initial guess of 1.0 forces all subsequent values to be decimals.{{site.data.alerts.end}}
+
+<br>
 
 You could actually copy each of the procedures above in exact order and begin making use of this program:
 
