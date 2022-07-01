@@ -25,7 +25,9 @@ r  if r > 0
 -r if r < 0
 {% endhighlight %}
 
-{{site.data.alerts.note}}<b>Psuedocode</b> is a detailed yet readable description of what a computer program or algorithm must do, expressed in a formally-styled natural language rather than in a programming language.<br><br>In the pseudocode written above, we are saying, "r equals... r if r is greater than 0; 0 if r equals 0; or -r if r is less than 0."{{site.data.alerts.end}}
+{{site.data.alerts.note}}The term <b>psuedocode</b> is used when we refer to a detailed yet readable description of what a computer program or algorithm must do, expressed in a formally-styled natural language rather than in a programming language.<br><br>In the pseudocode written above, we are saying, "r equals... r if r is greater than 0; 0 if r equals 0; or -r if r is less than 0."{{site.data.alerts.end}}
+
+<br>
 
 The construct of testing a value, in order to perform an operation depending on that value, is called **case analysis**.
 

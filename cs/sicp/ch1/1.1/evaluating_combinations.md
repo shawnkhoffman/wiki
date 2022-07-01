@@ -78,4 +78,10 @@ Unbound variable: x
 
 Furthermore, if you don't specify an environment that has context about operators such as `+`, `-`, `*`, etc., and the context isn't set to the global environment, then the values of those operators do not exist and the operators are therefore meaningless. However, exceptions to this general evaluation rule are called **special forms**, such as `define` in Lisp which is used to define a variable or a procedure.
 
+<br>
+
+{{site.data.alerts.note}}Special forms in Scheme are similar to <i>keywords</i> in Python.{{site.data.alerts.end}}
+
+<br>
+
 Therefore, the various kinds of expressions (each with its associated evaluation rule) constitute the syntax of the programming language.
