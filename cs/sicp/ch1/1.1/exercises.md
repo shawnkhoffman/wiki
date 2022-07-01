@@ -189,12 +189,20 @@ Eva demonstrates the program for Alyssa:
 Delighted, Alyssa uses new-if to rewrite the square-root program:
 
 {% highlight scheme linenos %}
-(define (sqrt-iter guess x) (new-if (good-enough? guess x)
-                guess
-                (sqrt-iter (improve guess x) x)))
+(define (sqrt-iter guess x)
+    (new-if (good-enough? guess x)
+            guess
+            (sqrt-iter (improve guess x) x)))
 {% endhighlight %}
 
 What happens when Alyssa attempts to use this to compute square roots? Explain.
+
+<br>
+
+**Subjects**:
+
+- [Predicates](/wiki/cs/sicp/ch1/1.1/conditional_expressions_and_predicates/#predicates)
+- [Square Roots by Newton's Method](/wiki/cs/sicp/ch1/1.1/example_newtons_method/)
 
 ## Exercise 1.7
 

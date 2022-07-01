@@ -97,3 +97,7 @@ Because Scheme uses applicative-order evaluation by default, all of the argument
 In **applicative-order evaluation**, when the procedure "test" is invoked, Ben will observe that the interpreter will immediately evaluate the arguments and then apply them; so, `x` will immediately be evaluated to `0`, but when the interpreter tries to evaluate `y` it will call the procedure `(p)` which will recursively invoke itself with no return value; thus, it will get stuck in an infinite loop.
 
 In **normal-order evaluation**, when the procedure "test" is invoked, Ben will observe that the interpreter will not immediately evaluate the arguments before they are applied; rather, the interpreter will wait to perform the evaluation until the primitive procedure `(= x 0)` is called (the predicate in the `if` conditional) inside the body of the parent procedure. Once the substitution is performed, the primitive procedure is evaluated to meet the condition of the consequent of the predicate returning true, causing the parent procedure to return the value `0`. Furthermore, because the predicate in the `if` conditional evaluates to true, the alternative is never applied, and so the value for `y` is never evaluated.
+
+## Exercise 1.6
+
+...
