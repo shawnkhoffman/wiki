@@ -201,6 +201,7 @@ What happens when Alyssa attempts to use this to compute square roots? Explain.
 
 **Subjects**:
 
+- [The Substitution Model](/wiki/cs/sicp/ch1/1.1/the_substitution_model/)
 - [Predicates](/wiki/cs/sicp/ch1/1.1/conditional_expressions_and_predicates/#predicates)
 - [Square Roots by Newton's Method](/wiki/cs/sicp/ch1/1.1/example_newtons_method/)
 

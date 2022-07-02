@@ -100,4 +100,8 @@ In **normal-order evaluation**, when the procedure "test" is invoked, Ben will o
 
 ## Exercise 1.6
 
-...
+According to the rules of evaluation for compound procedures, when a compound procedure is invoked the **substitution model** is applied; the Scheme interpreter goes through the body of that procedure and replaces every copy of a formal parameter with the corresponding actual argument value(s) provided when the procedure is invoked, and then Scheme evaluates the resulting expression.
+
+Furthermore, when Alyssa attempts to use `new-if` to compute square roots with the `sqrt-iter` procedure, `new-if` invokes the parent procedure (`sqrt-iter`) at each iteration because it is provided as one of its arguments. This causes the program to get stuck in an infinite loop.
+
+Contrastly, in the original `sqrt-iter` procedure, the original `if` is a special form (not a compound procedure) which doesn't follow the same rules. Furthermore, it only allows for two cases: the *consequent* and the *alternative.* This allows the `sqrt-iter` procedure to evaluate only until the base case is satisfied.
