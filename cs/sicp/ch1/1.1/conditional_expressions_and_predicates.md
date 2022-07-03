@@ -35,7 +35,97 @@ The construct of testing a value, in order to perform an operation depending on 
 
 ## Predicates
 
-### cond
+A **predicate** is a kind of operation that evaluates to a **boolean**, which is a data type that is interpreted as either True or False. This is a primitive construct in most programming languages.
+
+### Relational Operators
+
+One of the primitive boolean expressions available are **relational operators** and include `<`, `=`, and `>`.
+
+For example:
+
+{% highlight scheme linenos %}
+(= 5 5)
+#t
+
+(< 5 1)
+#f
+
+(> 25 5)
+#t
+{% endhighlight %}
+
+### Predicate Procedures
+
+Another boolean expression available is the **predicate procedure**, which can either be a built-in procedure or a compound procedure.
+
+Some of the built-in predicate procedures include: `number?`, `integer?`, `even?`, `odd?`, `positive?`, `negative?`, etc... Here's an example:
+
+{% highlight scheme linenos %}
+(even? 1)
+#f
+
+(even? 2)
+#t
+
+(odd? 1)
+#t
+
+(odd? 2)
+#f
+{% endhighlight %}
+
+Here's an example of a compound predicate:
+
+{% highlight scheme linenos %}
+(define (even? x)
+  (- 0 (modulo x 2)))
+{% endhighlight %}
+
+### Logical Operators
+
+In addition to the relational operators that can be used for comparison operations, we can use **logical operators** in a boolean expression:
+
+- `(and <e1> <e2> ... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to false, the value of the `and` expression is false, and the rest of the `<e>`'s are not evaluated. If all `<e>`'s evaluate to true values, the value of the `and` expression is the value of the last one.
+
+- `(or <e1> <e2> ... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to a true value, that value is returned as the value of the `or` expression, and the rest of  the `<e>`'s are not evaluated. If all `<e>`'s evaluate to false, the value of the `or` expression is false.
+
+- `(not <e>)` <br>The value of a `not` expression is true when the expression `<e>` evaluates to false, and false otherwise.
+
+Notice that `and` and `or` are special forms, not procedures, because not all of the subexpressions are evaluated, but `not` is an ordinary procedure.
+
+As an example of how these are used, the condition that a number `x` be in the range `5 < x < 10` may be  expressed as:
+
+{% highlight scheme linenos %}
+(and (> x 5) (< x 10))
+{% endhighlight %}
+
+When we define what `x` is and run it, we can see a result:
+
+{% highlight scheme linenos %}
+(define x 1)
+(and (> x 5) (< x 10))
+#f
+
+(define x 7)
+(and (> x 5) (< x 10))
+#t
+{% endhighlight %}
+
+As another example, we can define a predicate to test whether one number is greater than or equal to another as:
+
+{% highlight scheme linenos %}
+(define (>= x y)
+    (or (> x y) (= x y)))
+{% endhighlight %}
+
+or alternatively as:
+
+{% highlight scheme linenos %}
+(define (>= x y)
+    (not (< x y)))
+{% endhighlight %}
+
+## Cond Expressions
 
 Scheme contains a special form to perform case analysis called `cond` (which stands for **conditional**). The general form of a conditional expression is:
 
@@ -46,7 +136,7 @@ Scheme contains a special form to perform case analysis called `cond` (which sta
       (<pn> <en>))
 {% endhighlight %}
 
-The aforementioned procedure consists of the symbolic abstraction `cond` followed by parenthesized pairs of expressions (`<p>` and `<e>`) called **clauses**. The first expression in each pair (`<p>`) is a **predicate** – that is, an expression whose value is interpreted as either true or false. The corresponding expression (`<e>`) is the resulting expression if the result of the predicate that precedes it is true. This allows us to perform case analysis.
+The aforementioned procedure consists of the symbolic abstraction `cond` followed by parenthesized pairs of expressions (`<p>` and `<e>`) called **clauses**. The first expression in each pair (`<p>`) is the *predicate.* The corresponding expression (`<e>`) is the resulting expression if the returned boolean from the predicate is True. This allows us to perform case analysis.
 
 Furthermore, predicate `<p1>` is evaluated first; if its value is false, then `<p2>` is evaluated; if `<p2>`'s value is also false, then `<p3>` is evaluated. This process continues until a predicate is found whose value is true, in which case the interpreter returns the value of the corresponding expression (`<e>`) of the clause as the value of the entire `cond` expression. If none of the `<p>`'s are found to be true, the value of the `cond` expression is undefined.
 
@@ -91,38 +181,6 @@ This uses the special form `if`, which is a restricted type of conditional that 
 {% endhighlight %}
 
 To evaluate an `if` expression, the interpreter starts by evaluating the `<predicate>` part of the expression. If the `<predicate>` evaluates to true, the interpreter then evaluates the `<consequent>` and returns its value. Otherwise, it evaluates the `<alternative>` and returns its value.
-
-### and, or, not
-
-In addition to primitive predicates that use comparison operators, such as `<`, `=`, and `>`, we can use logical operators to construct compound predicates; the three most frequently used are `and`, `or`, and `not`:
-
-- `(and <e1> <e2> ... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to false, the value of the `and` expression is false, and the rest of the `<e>`'s are not evaluated. If all `<e>`'s evaluate to true values, the value of the `and` expression is the value of the last one.
-
-- `(or <e1> <e2> ... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to a true value, that value is returned as the value of the `or` expression, and the rest of  the `<e>`'s are not evaluated. If all `<e>`'s evaluate to false, the value of the `or` expression is false.
-
-- `(not <e>)` <br>The value of a `not` expression is true when the expression `<e>` evaluates to false, and false otherwise.
-
-Notice that `and` and `or` are special forms, not procedures, because not all of the subexpressions are evaluated, but `not` is an ordinary procedure.
-
-As an example of how these are used, the condition that a number `x` be in the range `5 < x < 10` may be  expressed as:
-
-{% highlight scheme linenos %}
-(and (> x 5) (< x 10))
-{% endhighlight %}
-
-As another example, we can define a predicate to test whether one number is greater than or equal to another as:
-
-{% highlight scheme linenos %}
-(define (>= x y)
-    (or (> x y) (= x y)))
-{% endhighlight %}
-
-or alternatively as:
-
-{% highlight scheme linenos %}
-(define (>= x y)
-    (not (< x y)))
-{% endhighlight %}
 
 ## Exercises
 
