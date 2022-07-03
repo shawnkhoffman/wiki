@@ -5,7 +5,7 @@ editors:
 summary: "These study notes are from Structure and Interpretation of Computer Programs - 2nd Edition (MIT Electrical Engineering and Computer Science) by Abelson, H. and Sussman, G."
 tags: [SICP, Computer Science, SICP Chapter 1]
 keywords: SICP, Computer Science, SICP Chapter 1
-references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://archive.org/details/ucberkeley_webcast_l28HAzKy0N8, https://youtu.be/BomXJWPF2cM
+references: https://web.mit.edu/6.001/6.037/sicp.pdf, https://archive.org/details/ucberkeley_webcast_TTK2lZoWbPQ, https://youtu.be/BomXJWPF2cM
 
 search: exclude
 
@@ -13,7 +13,7 @@ sidebar: compsci_sicp_ch1_sidebar
 folder: wiki/cs/ch1/1.1/
 ---
 
-I have provided another YouTube link at the bottom of this page to a very helpful video lecture provided by Dr. Andrew Runka where he covers Conditional Expressions and Predicates.
+I have provided links to two very helpful video lectures provided by Dr. Brian Harvey (UC Berkeley archives) and Dr. Andrew Runka (YouTube) where they cover Conditional Expressions and Predicates.
 
 ## Case Analysis
 
@@ -41,7 +41,7 @@ A **predicate** is a kind of operation that evaluates to a **boolean**, which is
 
 ### Relational Operators
 
-One of the primitive boolean expressions available are **relational operators** and include `<`, `=`, and `>`.
+One of the primitive predicates available are **relational operators** and include `<`, `=`, and `>`.
 
 For example:
 
@@ -56,9 +56,11 @@ For example:
 #t
 {% endhighlight %}
 
+{{site.data.alerts.note}}In Scheme, a boolean is denoted by a hashtag followed by the letter t or f, such as <b>#t</b> (true) or <b>#f</b> (false).{{site.data.alerts.end}}
+
 ### Logical Operators
 
-In addition to the relational operators that can be used for comparison operations, we can use **logical operators** in a boolean expression:
+In addition to the relational operators that can be used for comparison operations, we can use **logical operators** in a predicate:
 
 - `(and <e1> <e2> ... <en>)` <br>The interpreter evaluates the expressions `<e>` one at a time, in left-to-right order. If any `<e>` evaluates to false, the value of the `and` expression is false, and the rest of the `<e>`'s are not evaluated. If all `<e>`'s evaluate to true values, the value of the `and` expression is the value of the last one.
 
@@ -104,7 +106,7 @@ or alternatively as:
 
 ### Predicate Procedures
 
-Another boolean expression available is the **predicate procedure**, which can either be a built-in procedure or a compound procedure.
+Another predicate available is the **predicate procedure**, which can either be a built-in procedure or a compound procedure.
 
 Some of the built-in predicate procedures include: `number?`, `integer?`, `even?`, `odd?`, `positive?`, `negative?`, etc... Here's an example:
 
@@ -209,6 +211,10 @@ positive: 10
 (signum -100)
 negative: -100
 {% endhighlight %}
+
+{{site.data.alerts.note}}More on the signum piecewise function <a target="_blank" href="https://en.wikipedia.org/wiki/Sign_function">here</a>{{site.data.alerts.end}}
+
+<br>
 
 Furthermore, we can see that if we add a step (`+ 1 1`) to the sequence, and that step does not output data to the screen and it isn't the final expression in the sequence, then the value of that step will be discarded:
 
