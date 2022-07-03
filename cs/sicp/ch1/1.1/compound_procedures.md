@@ -68,11 +68,13 @@ square(21)
 
 ## Extending Compound Procedures
 
-Back to Scheme, we can also use `square` as a building block in defining other procedures. For example, `x² + y²` can be expressed as:
+Back to Scheme, we can also use `square` as a building block in defining other procedures, similar to piecewise functions in math. For example, `x² + y²` can be expressed as:
 
 {% highlight scheme linenos %}
 (+ (square x) (square y))
 {% endhighlight %}
+
+{{site.data.alerts.note}}More about piecewise functions <a target="_blank" href="https://en.wikipedia.org/wiki/Piecewise">here</a>{{site.data.alerts.end}}
 
 Therefore, we can easily define a procedure that, where any two numbers are provided as arguments, produces the sum of their squares: 
 
@@ -96,4 +98,4 @@ Now we can take this a step further and use `sum-of-squares` as a building block
 136
 {% endhighlight %}
 
-This is useful when we start getting into incremental development.
+This is useful when we start getting into the subject of incremental development.
