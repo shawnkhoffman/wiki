@@ -99,3 +99,5 @@ Now we can take this a step further and use `sum-of-squares` as a building block
 {% endhighlight %}
 
 This is useful when we start getting into the subject of incremental development.
+
+{{site.data.alerts.note}}A procedure that either takes another procedure as an argument, or returns a procedure as its value, is referred to as a <b>higher-order procedure</b>. More on these later.{{site.data.alerts.end}}
